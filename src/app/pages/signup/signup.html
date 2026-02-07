@@ -1,0 +1,113 @@
+<div class="min-h-screen flex font-['Poppins']">
+
+  <!-- LEFT FORM -->
+  <div class="w-full md:w-1/2 flex items-center justify-center bg-white">
+    <div class="w-full max-w-[420px]">
+
+      <h1 class="text-[28px] font-semibold text-gray-900 leading-snug">
+        Welcome to FEM<br>
+        <span class="font-bold">Sign Up</span> to getting started.
+      </h1>
+
+      <p class="mt-2 text-sm text-[#8181A5]">
+        Enter your details to proceed further
+      </p>
+
+      <div class="mt-10 space-y-8">
+
+        <!-- Full name -->
+        <div>
+          <label class="block text-[13px] mb-1 text-[#8181A5]">Full name</label>
+          <div class="relative border-b border-gray-200">
+            <input
+              type="text"
+              placeholder="Craft UI"
+              class="w-full py-2 text-sm outline-none bg-transparent placeholder-gray-900" />
+            <i data-lucide="user"
+               class="w-4 h-4 absolute right-0 top-2 text-gray-700"></i>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label class="block text-[13px] mb-1 text-[#8181A5]">Email</label>
+          <div class="relative border-b border-gray-200">
+            <input
+              type="email"
+              placeholder="support@craftui.com"
+              class="w-full py-2 text-sm outline-none bg-transparent placeholder-gray-900" />
+            <i data-lucide="mail"
+               class="w-4 h-4 absolute right-0 top-2 text-gray-700"></i>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label class="block text-[13px] mb-1 text-[#8181A5]">Password</label>
+          <div class="relative border-b border-gray-200">
+            <input
+              type="password"
+              placeholder="Start typing..."
+              class="w-full py-2 text-sm outline-none bg-transparent placeholder-indigo-400" />
+            <i data-lucide="lock"
+               class="w-4 h-4 absolute right-0 top-2 text-indigo-400"></i>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Terms -->
+      <div class="flex items-center gap-2 mt-6">
+        <input type="checkbox" class="w-4 h-4 accent-indigo-900">
+        <span class="text-sm text-gray-700">
+          I agree with <span class="font-semibold">terms & conditions</span>
+        </span>
+      </div>
+
+      <!-- Buttons -->
+      <div class="flex gap-4 mt-6">
+
+        <button
+          class="flex-1 bg-[#0B1437] text-white py-3 rounded-lg font-semibold hover:opacity-90 transition">
+          Sign Up
+        </button>
+
+        <button
+          routerLink="/signin"
+          class="flex-1 bg-[#EEF2FF] text-[#0B1437] py-3 rounded-lg font-semibold hover:bg-[#E0E7FF] transition">
+          Sign In
+        </button>
+
+      </div>
+
+      <!-- Social -->
+      <p class="text-center text-sm mt-10 text-[#8181A5]">
+        Or sign in with
+      </p>
+
+      <div class="flex justify-center gap-6 mt-4">
+
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center border-2 border-[#8181A5]">
+          <i data-lucide="twitter" class="w-6 h-6 text-[#8181A5]"></i>
+        </div>
+
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center border-2 border-[#8181A5]">
+          <i data-lucide="chrome" class="w-6 h-6 text-[#8181A5]"></i>
+        </div>
+
+        <div class="w-14 h-14 rounded-xl flex items-center justify-center border-2 border-[#8181A5]">
+          <i data-lucide="facebook" class="w-6 h-6 text-[#8181A5]"></i>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="hidden md:block md:w-1/2">
+    <img src="assets/illustration.png"
+         class="w-full h-full object-cover"  style="height: 770px;"/>
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+
+<div class="flex min-h-screen bg-[#F6F8FC] font-['Poppins']">
+  <!-- SIDEBAR -->
+  <aside class="w-64 bg-gradient-to-b from-[#0B1437] to-[#020617] text-white p-6">
+    <!-- LOGO PLACEHOLDER -->
+    <div class="h-14 w-14 bg-white/10 rounded mb-10"></div>
+
+    <div class="space-y-4 text-sm">
+      <div class="flex items-center gap-3 bg-white/10 px-4 py-2 rounded">
+        <i data-lucide="layout-dashboard" class="w-4 h-4"></i>
+        Dashboard
+      </div>
+
+      <p class="text-xs text-gray-400 mt-6">OPERATIONS</p>
+
+      <div class="flex items-center gap-3"><i data-lucide="fire-extinguisher"></i> My extinguishers</div>
+      <div class="flex items-center gap-3"><i data-lucide="wrench"></i> Service Requests</div>
+      <div class="flex items-center gap-3"><i data-lucide="users"></i> Inspectors</div>
+      <div class="flex items-center gap-3"><i data-lucide="map-pin"></i> My Locations</div>
+      <div class="flex items-center gap-3"><i data-lucide="file-text"></i> Reports</div>
+      <div class="flex items-center gap-3"><i data-lucide="shopping-cart"></i> Shop</div>
+      <div class="flex items-center gap-3"><i data-lucide="settings"></i> Settings</div>
+    </div>
+  </aside>
+
+  <!-- MAIN AREA -->
+  <main class="flex-1 p-8">
+    <!-- TOP BAR -->
+    <div class="flex justify-between items-center mb-6">
+      <div>
+        <h1 class="text-xl font-semibold">Safety Dashboard</h1>
+        <p class="text-sm text-gray-500">
+          Overview of your fire safety compliance status.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <div class="relative">
+          <i data-lucide="search"
+             class="w-4 h-4 absolute left-3 top-2.5 text-gray-400"></i>
+          <input
+            class="pl-9 pr-4 py-2 rounded-full border text-sm"
+            placeholder="Search for something">
+        </div>
+
+        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+        <i data-lucide="bell" class="w-5 h-5"></i>
+        <i data-lucide="settings" class="w-5 h-5"></i>
+      </div>
+    </div>
+
+    <!-- PAGE CONTENT -->
+    <router-outlet></router-outlet>
+  </main>
+</div>
