@@ -8,7 +8,7 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
+, "src/app/pages/components/RequestServiceModal.tsx"  ],
   "exclude": [
     "src/**/*.spec.ts"
   ]

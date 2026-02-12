@@ -1,0 +1,61 @@
+/* Modal overlay: always on top of the viewport */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Modal card animation */
+.modal-content {
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Priority button styles */
+.priority-btn {
+  transition: all 0.2s ease;
+}
+
+.priority-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Form field focus styles */
+.form-field:focus {
+  outline: none;
+  border-color: #0B1437;
+  box-shadow: 0 0 0 3px rgba(11, 20, 55, 0.1);
+}
+
+/* Modal overlay */
+.modal-overlay {
+  backdrop-filter: blur(4px);
+}
