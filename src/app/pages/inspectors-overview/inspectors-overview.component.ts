@@ -38,26 +38,26 @@ export class InspectorsOverviewComponent {
       location: 'New York, NY',
       status: 'available',
       phone: '+1 (555) 123-4567',
-      email: 'sarah.johnson@firesafety.com',
+      email: 'sarah.j@company.com',
       yearsExperience: 8,
       inspectionsCompleted: 1247,
       certifications: ['ISO 9001 Lead', 'OSHA Certified', 'Safety First L2'],
-      lastInspectionDate: '2024-01-15',
-      avatar: 'SJ'
+      lastInspectionDate: '2023-10-15',
+      avatar: 'https://i.pravatar.cc/150?u=sarah'
     },
     {
       id: '2',
       name: 'Michael Chen',
-      title: 'Fire Protection Specialist',
-      location: 'Los Angeles, CA',
+      title: 'Structural Engineer',
+      location: 'Industrial District',
       status: 'busy',
-      phone: '+1 (555) 234-5678',
-      email: 'michael.chen@firesafety.com',
-      yearsExperience: 6,
-      inspectionsCompleted: 892,
-      certifications: ['NFPA Certified', 'Electrical Safety L1'],
-      lastInspectionDate: '2024-01-14',
-      avatar: 'MC'
+      phone: '+1 (555) 012-3456',
+      email: 'inspector@company.com',
+      yearsExperience: 8,
+      inspectionsCompleted: 1200,
+      certifications: ['ISO 9001 Lead', 'OSHA Certified', 'Safety First L2'],
+      lastInspectionDate: '2023-10-24',
+      avatar: 'https://i.pravatar.cc/150?u=michael'
     },
     {
       id: '3',
@@ -66,12 +66,12 @@ export class InspectorsOverviewComponent {
       location: 'Houston, TX',
       status: 'available',
       phone: '+1 (555) 345-6789',
-      email: 'emily.rodriguez@firesafety.com',
+      email: 'emily.r@company.com',
       yearsExperience: 5,
       inspectionsCompleted: 656,
       certifications: ['OSHA Certified', 'Hazard Analysis L2'],
-      lastInspectionDate: '2024-01-13',
-      avatar: 'ER'
+      lastInspectionDate: '2023-10-13',
+      avatar: 'https://i.pravatar.cc/150?u=emily'
     },
     {
       id: '4',
@@ -80,12 +80,12 @@ export class InspectorsOverviewComponent {
       location: 'Chicago, IL',
       status: 'busy',
       phone: '+1 (555) 456-7890',
-      email: 'david.kim@firesafety.com',
+      email: 'david.k@company.com',
       yearsExperience: 10,
       inspectionsCompleted: 1523,
-      certifications: ['ISO 9001 Lead', 'Extinguisher Specialist L3', 'Safety First L2'],
-      lastInspectionDate: '2024-01-12',
-      avatar: 'DK'
+      certifications: ['ISO 9001 Lead', 'NFPA Certified', 'Safety First L2'],
+      lastInspectionDate: '2023-10-12',
+      avatar: 'https://i.pravatar.cc/150?u=david'
     },
     {
       id: '5',
@@ -94,12 +94,12 @@ export class InspectorsOverviewComponent {
       location: 'Phoenix, AZ',
       status: 'available',
       phone: '+1 (555) 567-8901',
-      email: 'lisa.thompson@firesafety.com',
+      email: 'lisa.t@company.com',
       yearsExperience: 7,
       inspectionsCompleted: 987,
       certifications: ['Emergency Systems L2', 'OSHA Certified'],
-      lastInspectionDate: '2024-01-11',
-      avatar: 'LT'
+      lastInspectionDate: '2023-10-11',
+      avatar: 'https://i.pravatar.cc/150?u=lisa'
     },
     {
       id: '6',
@@ -108,40 +108,12 @@ export class InspectorsOverviewComponent {
       location: 'Philadelphia, PA',
       status: 'available',
       phone: '+1 (555) 678-9012',
-      email: 'james.wilson@firesafety.com',
+      email: 'james.w@company.com',
       yearsExperience: 9,
       inspectionsCompleted: 1434,
-      certifications: ['Industrial Safety L3', 'ISO 9001 Lead', 'Hazard Analysis L2'],
-      lastInspectionDate: '2024-01-10',
-      avatar: 'JW'
-    },
-    {
-      id: '7',
-      name: 'Maria Garcia',
-      title: 'Fire Prevention Specialist',
-      location: 'San Antonio, TX',
-      status: 'busy',
-      phone: '+1 (555) 789-0123',
-      email: 'maria.garcia@firesafety.com',
-      yearsExperience: 4,
-      inspectionsCompleted: 445,
-      certifications: ['Prevention Specialist L2', 'OSHA Certified'],
-      lastInspectionDate: '2024-01-09',
-      avatar: 'MG'
-    },
-    {
-      id: '8',
-      name: 'Robert Taylor',
-      title: 'Chief Safety Inspector',
-      location: 'San Diego, CA',
-      status: 'available',
-      phone: '+1 (555) 890-1234',
-      email: 'robert.taylor@firesafety.com',
-      yearsExperience: 12,
-      inspectionsCompleted: 1876,
-      certifications: ['ISO 9001 Lead', 'Chief Inspector L4', 'Safety First L2', 'NFPA Certified'],
-      lastInspectionDate: '2024-01-08',
-      avatar: 'RT'
+      certifications: ['Industrial Safety L3', 'ISO 9001 Lead'],
+      lastInspectionDate: '2023-10-10',
+      avatar: 'https://i.pravatar.cc/150?u=james'
     }
   ];
 
@@ -151,7 +123,7 @@ export class InspectorsOverviewComponent {
       inspector.title.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
       inspector.location.toLowerCase().includes(this.searchTerm.toLowerCase())
     );
-    
+
     const start = (this.currentPage - 1) * this.itemsPerPage;
     const end = start + this.itemsPerPage;
     return filtered.slice(start, end);
@@ -200,7 +172,7 @@ export class InspectorsOverviewComponent {
   }
 
   getStatusColor(status: string) {
-    return status === 'available' ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700';
+    return status;
   }
 
   getCertificationColor(certification: string) {

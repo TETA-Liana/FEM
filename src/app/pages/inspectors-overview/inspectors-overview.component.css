@@ -1,23 +1,25 @@
 /* Inspector card hover effects */
 .inspector-card {
-  transition: all 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .inspector-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(11, 20, 55, 0.08);
+  border-color: #0B1437;
 }
 
-/* Sidebar animations */
+/* Sidebar entrance animation */
 .sidebar-enter {
-  animation: slideInRight 0.3s ease-out;
+  animation: slideInRight 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 @keyframes slideInRight {
   from {
-    transform: translateX(100%);
+    transform: translateX(40px);
     opacity: 0;
   }
+
   to {
     transform: translateX(0);
     opacity: 1;
@@ -26,68 +28,69 @@
 
 /* Status badge styles */
 .status-badge {
+  letter-spacing: 0.05em;
+  font-family: 'Inter', sans-serif;
+}
+
+.available {
+  background: #ECFDF5;
+  color: #059669;
+}
+
+.busy {
+  background: #FFF7ED;
+  color: #EA580C;
+}
+
+/* Avatar enhancement */
+.avatar img {
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
+}
+
+.inspector-card:hover .avatar img {
+  transform: scale(1.1);
+}
+
+/* Custom stats boxes */
+.stats-box {
   transition: all 0.2s ease;
 }
 
-.status-badge:hover {
-  transform: scale(1.05);
+.stats-box:hover {
+  background-color: white;
+  border-color: #0B1437;
+  transform: scale(1.02);
 }
 
-/* Certification tags */
-.certification-tag {
+/* Search input focus */
+.search-input {
   transition: all 0.2s ease;
 }
 
-.certification-tag:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Button styles */
-.btn-primary {
-  transition: all 0.2s ease;
-}
-
-.btn-primary:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(11, 20, 55, 0.2);
-}
-
-.btn-primary:active:not(:disabled) {
-  transform: translateY(0);
-}
-
-/* Avatar styles */
-.avatar {
-  position: relative;
-  overflow: hidden;
-}
-
-.avatar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
-}
-
-/* Search input focus styles */
 .search-input:focus {
-  box-shadow: 0 0 0 3px rgba(11, 20, 55, 0.1);
+  border-color: #0B1437;
+  box-shadow: 0 0 0 4px rgba(11, 20, 55, 0.05);
 }
 
-/* Pagination button styles */
-.pagination-btn {
-  transition: all 0.2s ease;
+/* Scrollbar for detail sidebar */
+.inspector-details-sidebar {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #E2E8F0 transparent;
 }
 
-.pagination-btn:hover:not(:disabled) {
-  background-color: #f8fafc;
+.inspector-details-sidebar::-webkit-scrollbar {
+  width: 4px;
 }
 
-/* Summary card hover effects */
+.inspector-details-sidebar::-webkit-scrollbar-thumb {
+  background: #E2E8F0;
+  border-radius: 10px;
+}
+
+/* Summary card enhancements */
 .summary-card {
   transition: all 0.2s ease;
 }
@@ -95,16 +98,6 @@
 .summary-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* Close button hover effect */
-.close-btn {
-  transition: all 0.2s ease;
-}
-
-.close-btn:hover {
-  background-color: #f1f5f9;
-  transform: rotate(90deg);
 }
 
 /* Responsive adjustments */
@@ -118,30 +111,11 @@
   .summary-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .inspector-details-sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
     width: 100%;
-    max-width: 400px;
-    z-index: 50;
+    max-width: none;
+    position: relative;
+    margin-top: 2rem;
   }
-}
-
-/* Loading skeleton animation */
-@keyframes shimmer {
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
-}
-
-.skeleton {
-  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
-  background-size: 200px 100%;
-  animation: shimmer 1.5s infinite;
 }
