@@ -1,6 +1,7 @@
 
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 export interface ExtinguisherData {
   id: string;
@@ -13,14 +14,14 @@ export interface ExtinguisherData {
 @Component({
   selector: 'app-service-requests',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './service-requests.component.html',
   styleUrls: ['./service-requests.component.css']
 })
 export class ServiceRequestsComponent {
   showModal = false;
   selectedExtinguisher: ExtinguisherData | null = null;
-  
+
   serviceTypes = [
     { value: 'refill', label: 'Refill' },
     { value: 'replacement', label: 'Replacement' },
@@ -31,12 +32,12 @@ export class ServiceRequestsComponent {
   ];
 
   priorities = ['Low', 'Medium', 'High', 'Urgent'];
-  
+
   serviceRequest = {
     extinguisherId: '',
     location: '',
     serviceType: '',
-    priority: 'Medium',
+    priority: 'Urgent',
     preferredDate: '',
     additionalNotes: ''
   };

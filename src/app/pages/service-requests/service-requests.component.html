@@ -38,7 +38,8 @@
     </div>
 
     <!-- REFILL -->
-    <div class="bg-[#0B1437] rounded-xl p-4 text-white shadow flex flex-col justify-between min-h-[120px] ring-2 ring-yellow-400/40">
+    <div
+      class="bg-[#0B1437] rounded-xl p-4 text-white shadow flex flex-col justify-between min-h-[120px] ring-2 ring-yellow-400/40">
       <div class="flex items-start justify-between">
         <div class="w-8 h-8 rounded-lg bg-yellow-400/20 flex items-center justify-center">
           <i data-lucide="droplet" class="w-4 h-4 text-yellow-400"></i>
@@ -89,16 +90,13 @@
 
   <!-- SEARCH -->
   <div class="flex flex-wrap items-center gap-3 mb-6">
-    <input
-      class="flex-1 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
+    <input class="flex-1 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
       placeholder="Search by Extinguisher ID or Request ID..." />
 
-    <input
-      class="w-40 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
+    <input class="w-40 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
       placeholder="Status" />
 
-    <input
-      class="w-40 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
+    <input class="w-40 h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400"
       placeholder="Priority" />
   </div>
 
@@ -211,105 +209,98 @@
 
   <!-- MODAL -->
   <div *ngIf="showModal" class="modal-overlay">
-    <div class="bg-white rounded-xl shadow-2xl w-full max-w-md mx-4 modal-content">
+    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden modal-content">
+
       <!-- Modal Header -->
-      <div class="p-6 border-b border-gray-200">
-        <h2 class="text-lg font-semibold text-[#0B1437]">Request Service</h2>
-        <p class="text-xs text-gray-500 mt-1">Submit a service request for this extinguisher</p>
+      <div class="bg-[#0B1437] p-4 text-white flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
+            <i data-lucide="wrench" class="w-5 h-5 text-white"></i>
+          </div>
+          <div>
+            <h2 class="text-lg font-bold">Request Service</h2>
+            <p class="text-[11px] text-white/50">Submit a request for this unit</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="text-[10px] text-white/40 font-medium">x-y</span>
+          <button (click)="closeModal()"
+            class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white/10 transition-colors">
+            <i data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Modal Body -->
-      <div class="p-6 space-y-4">
-        <!-- Extinguisher ID -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-1">EXTINGUISHER ID:</label>
-          <input 
-            type="text" 
-            [value]="serviceRequest.extinguisherId" 
-            readonly 
-            class="w-full h-9 rounded-lg border border-gray-200 bg-gray-50 px-3 text-xs text-gray-600" />
-        </div>
-
-        <!-- Location -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-1">LOCATION:</label>
-          <input 
-            type="text" 
-            [value]="serviceRequest.location" 
-            readonly 
-            class="w-full h-9 rounded-lg border border-gray-200 bg-gray-50 px-3 text-xs text-gray-600" />
-        </div>
-
-        <!-- Service Type -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-1">
-            Service Type: <span class="text-red-500">*</span>
-          </label>
-          <select 
-            [(ngModel)]="serviceRequest.serviceType" 
-            class="w-full h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#0B1437]">
-            <option value="">Select service type...</option>
-            <option *ngFor="let type of serviceTypes" [value]="type.value">
-              {{ type.label }}
-            </option>
-          </select>
-        </div>
-
-        <!-- Priority -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-2">Priority:</label>
-          <div class="flex gap-2">
-            <button 
-              *ngFor="let priority of priorities"
-              type="button"
-              (click)="serviceRequest.priority = priority"
-              [class]="serviceRequest.priority === priority 
-                ? 'px-3 py-1 rounded text-xs font-medium transition-colors ' + 
-                  (priority === 'Urgent' ? 'bg-red-500 text-white' : 
-                   priority === 'High' ? 'bg-orange-500 text-white' : 
-                   priority === 'Medium' ? 'bg-yellow-500 text-white' : 
-                   'bg-gray-500 text-white')
-                : 'px-3 py-1 rounded text-xs font-medium border border-gray-300 text-gray-600 hover:bg-gray-50'">
-              {{ priority }}
-            </button>
+      <div class="p-5">
+        <!-- Summary Info Box -->
+        <div class="bg-[#F6F8FC] rounded-lg p-4 mb-5 grid grid-cols-2 gap-4 border border-[#E5E7EB]">
+          <div>
+            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Extinguisher ID</p>
+            <p class="text-sm font-bold text-[#0B1437]">{{ serviceRequest.extinguisherId }}</p>
+          </div>
+          <div>
+            <p class="text-[9px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">Location</p>
+            <p class="text-sm font-bold text-[#0B1437]">{{ serviceRequest.location }}</p>
           </div>
         </div>
 
-        <!-- Preferred Service Date -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-1">Preferred Service Date:</label>
-          <input 
-            type="date" 
-            [(ngModel)]="serviceRequest.preferredDate"
-            class="w-full h-9 rounded-lg border border-gray-200 bg-white px-3 text-xs focus:outline-none focus:ring-2 focus:ring-[#0B1437]" />
-        </div>
+        <!-- Form Fields -->
+        <div class="space-y-3">
+          <!-- Service Type -->
+          <div class="form-input-container">
+            <label class="form-label">Service Type <span class="text-red-500">*</span></label>
+            <select [(ngModel)]="serviceRequest.serviceType"
+              class="form-input appearance-none bg-[url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20viewBox%3D%220%200%2024%2024%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22m6%209%206%206%206-6%22%2F%3E%3C%2Fsvg%3E')] bg-[length:20px] bg-[right_16px_center] bg-no-repeat">
+              <option value="">Select service type...</option>
+              <option *ngFor="let type of serviceTypes" [value]="type.value">
+                {{ type.label }}
+              </option>
+            </select>
+          </div>
 
-        <!-- Additional Notes -->
-        <div>
-          <label class="block text-xs font-medium text-gray-700 mb-1">Additional Notes:</label>
-          <textarea 
-            [(ngModel)]="serviceRequest.additionalNotes"
-            rows="3"
-            placeholder="Add any special instructions or details..."
-            class="w-full rounded-lg border border-gray-200 bg-white px-3 text-xs placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-[#0B1437]"></textarea>
+          <!-- Priority Selection -->
+          <div class="form-input-container">
+            <label class="form-label">Priority <span class="text-red-500">*</span></label>
+            <div class="priority-options">
+              <button *ngFor="let priority of priorities" type="button" (click)="serviceRequest.priority = priority"
+                class="priority-btn" [class.active-low]="serviceRequest.priority === 'Low' && priority === 'Low'"
+                [class.active-medium]="serviceRequest.priority === 'Medium' && priority === 'Medium'"
+                [class.active-high]="serviceRequest.priority === 'High' && priority === 'High'"
+                [class.active-urgent]="serviceRequest.priority === 'Urgent' && priority === 'Urgent'">
+                {{ priority }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Preferred Service Date -->
+          <div class="form-input-container">
+            <label class="form-label">Preferred Service Date</label>
+            <input type="date" [(ngModel)]="serviceRequest.preferredDate" class="form-input" />
+          </div>
+
+          <!-- Additional Notes -->
+          <div class="form-input-container">
+            <label class="form-label">Additional Notes</label>
+            <textarea [(ngModel)]="serviceRequest.additionalNotes"
+              placeholder="Provide any additional details or special instructions..." class="form-textarea"></textarea>
+          </div>
         </div>
       </div>
 
       <!-- Modal Footer -->
-      <div class="p-6 border-t border-gray-200 flex justify-end gap-3">
-        <button 
-          (click)="closeModal()"
-          class="px-4 py-2 rounded-lg border border-gray-300 text-gray-700 text-xs font-medium hover:bg-gray-50">
+      <div class="p-5 pt-0 flex justify-end gap-3">
+        <button (click)="closeModal()"
+          class="h-9 px-5 rounded-lg bg-gray-100 text-gray-700 text-[12px] font-bold hover:bg-gray-200 transition-colors">
           Cancel
         </button>
-        <button 
-          (click)="submitRequest()"
-          [disabled]="!serviceRequest.serviceType"
-          class="px-4 py-2 rounded-lg bg-[#0B1437] text-white text-xs font-medium hover:bg-[#0B1437]/90 disabled:opacity-50 disabled:cursor-not-allowed">
+        <button (click)="submitRequest()"
+          class="h-9 px-5 rounded-lg bg-[#0B1437] text-white text-[12px] font-bold inline-flex items-center gap-2 hover:bg-[#0B1437]/80 transition-all active:scale-95 cursor-pointer shadow-lg shadow-[#0B1437]/20">
+          <i data-lucide="clipboard-check" class="w-4 h-4"></i>
           Submit Request
         </button>
       </div>
     </div>
   </div>
+
 
 </div>
