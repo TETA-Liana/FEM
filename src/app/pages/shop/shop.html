@@ -156,80 +156,109 @@
     </div>
 
     <!-- PRODUCT GRID -->
-    <div class="grid grid-cols-3 gap-5 mb-8">
+    <div class="grid grid-cols-3 gap-4 mb-8">
         <div *ngFor="let p of products"
-            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow">
-            <!-- Image -->
-            <div class="relative h-44 overflow-hidden" [ngClass]="p.imgBg">
-                <img *ngIf="p.image" [src]="p.image" class="w-full h-full object-cover opacity-80" alt="">
-                <!-- If no image, show a fire extinguisher placeholder icon -->
-                <div *ngIf="!p.image" class="w-full h-full flex items-center justify-center">
-                    <div class="w-20 h-28 bg-[#EF4444] rounded-t-full rounded-b-lg shadow-lg relative">
-                        <div
-                            class="absolute top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-[#DC2626] rounded-full border-2 border-white">
+            class="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-shadow flex flex-col">
+            <!-- Image area -->
+            <div class="relative h-40 flex items-center justify-center" [ngClass]="p.imgBg">
+                <img *ngIf="p.image" [src]="p.image" class="w-full h-full object-cover" alt="">
+                <!-- Placeholder extinguisher for cards without photo -->
+                <div *ngIf="!p.image" class="flex items-center justify-center w-full h-full">
+                    <div class="relative flex flex-col items-center">
+                        <!-- cylinder body -->
+                        <div class="w-10 h-[72px] bg-[#EF4444] rounded-2xl shadow-md relative">
+                            <!-- nozzle -->
+                            <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-4 bg-[#DC2626] rounded-sm">
+                            </div>
+                            <!-- handle ring -->
+                            <div
+                                class="absolute top-2 left-1/2 -translate-x-1/2 w-6 h-2 border-2 border-[#B91C1C] rounded-full">
+                            </div>
+                            <!-- label band -->
+                            <div class="absolute bottom-4 left-0 right-0 h-3 bg-white/20 rounded"></div>
                         </div>
-                        <div class="absolute bottom-4 left-1/2 -translate-x-1/2 w-8 h-2 bg-[#B91C1C] rounded-full">
-                        </div>
+                        <!-- base -->
+                        <div class="w-12 h-2 bg-[#B91C1C] rounded-b-xl mt-0.5"></div>
                     </div>
                 </div>
-                <!-- Badge top left -->
-                <span class="absolute top-3 left-3 px-2 py-0.5 rounded text-[9px] font-extrabold tracking-wider"
-                    [ngClass]="p.badgeClass">
-                    {{ p.badge }}
-                </span>
-                <!-- Status top right -->
-                <span class="absolute top-3 right-3 px-2 py-0.5 rounded text-[9px] font-extrabold tracking-wider"
-                    [ngClass]="p.statusClass">
-                    {{ p.status }}
-                </span>
+                <!-- BOTH badges stacked top-right -->
+                <div class="absolute top-2.5 right-2.5 flex flex-col items-end gap-1">
+                    <span class="px-2 py-0.5 rounded text-[8px] font-extrabold tracking-wider" [ngClass]="p.badgeClass">
+                        {{ p.badge }}
+                    </span>
+                    <span class="px-2 py-0.5 rounded-full text-[8px] font-extrabold" [ngClass]="p.statusClass">
+                        {{ p.status }}
+                    </span>
+                </div>
             </div>
 
             <!-- Content -->
-            <div class="p-4">
-                <h3 class="text-[13px] font-extrabold text-[#0B1228] mb-0.5">{{ p.name }}</h3>
-                <p class="text-[10px] font-semibold text-slate-400 mb-4">Model: {{ p.model }}</p>
+            <div class="p-4 flex flex-col flex-1">
+                <h3 class="text-[13px] font-extrabold text-[#0B1228] mb-0.5 leading-tight">{{ p.name }}</h3>
+                <p class="text-[10px] font-medium text-slate-400 mb-4">Model: {{ p.model }}</p>
 
-                <div class="grid grid-cols-2 gap-3 mb-4 pb-4 border-b border-slate-100">
+                <!-- Capacity + Warranty -->
+                <div class="grid grid-cols-2 gap-3 mb-3">
                     <div>
-                        <p class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider mb-1">Capacity</p>
-                        <p class="text-[12px] font-extrabold text-[#0B1228]">{{ p.capacity }}</p>
+                        <p class="text-[8px] font-extrabold text-slate-400 uppercase tracking-wider mb-0.5">Capacity</p>
+                        <p class="text-[13px] font-extrabold text-[#0B1228]">{{ p.capacity }}</p>
                     </div>
                     <div>
-                        <p class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider mb-1">Warranty</p>
-                        <p class="text-[12px] font-extrabold text-[#0B1228]">{{ p.warranty }}</p>
+                        <p class="text-[8px] font-extrabold text-slate-400 uppercase tracking-wider mb-0.5">Warranty</p>
+                        <p class="text-[13px] font-extrabold text-[#0B1228]">{{ p.warranty }}</p>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-2 mb-4 pb-4 border-b border-slate-100">
-                    <i data-lucide="building-2" class="w-3 h-3 text-slate-400 shrink-0"></i>
+                <!-- Supplier -->
+                <div class="flex items-center gap-1.5 mb-3">
+                    <svg class="w-2.5 h-2.5 text-slate-400 shrink-0" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <rect x="3" y="9" width="18" height="12" rx="1" />
+                        <path d="M9 21V9M15 21V9M3 9l9-6 9 6" />
+                    </svg>
                     <span class="text-[10px] font-semibold text-slate-500">{{ p.supplier }}</span>
                 </div>
 
-                <p class="text-[9px] font-extrabold text-slate-400 uppercase tracking-wider mb-1">Price</p>
-                <div class="flex items-baseline gap-1.5 mb-4">
-                    <span class="text-[20px] font-black text-[#0B1228]">${{ p.price }}</span>
-                    <span class="text-[11px] font-semibold text-slate-400 line-through">{{ p.oldPrice }}</span>
+                <!-- Price -->
+                <div class="mb-4">
+                    <p class="text-[8px] font-extrabold text-slate-400 uppercase tracking-wider mb-0.5">Price</p>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-[22px] font-black text-[#0B1228] leading-none">${{ p.price }}</span>
+                        <span class="text-[10px] font-semibold text-slate-400">.99</span>
+                    </div>
                 </div>
 
-                <div class="flex items-center gap-2">
+                <!-- Buttons -->
+                <div class="flex items-center gap-2 mt-auto">
                     <button *ngIf="!p.soldOut"
-                        class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-[#0B1228] text-white rounded-xl text-[11px] font-extrabold hover:bg-slate-800 transition-colors shadow-sm">
-                        <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+                        class="flex-1 flex items-center justify-center gap-1.5 py-2 bg-[#0B1228] text-white rounded-xl text-[11px] font-bold hover:bg-slate-800 transition-colors">
+                        <svg class="w-3 h-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
                         Add
                     </button>
                     <button *ngIf="p.soldOut"
-                        class="flex-1 flex items-center justify-center gap-2 py-2.5 bg-slate-200 text-slate-500 rounded-xl text-[11px] font-extrabold cursor-not-allowed">
-                        <i data-lucide="x-circle" class="w-3.5 h-3.5"></i>
+                        class="flex-1 flex items-center justify-center gap-1.5 py-2 bg-slate-100 text-slate-400 rounded-xl text-[11px] font-bold cursor-not-allowed border border-slate-200">
+                        <svg class="w-3 h-3 shrink-0 opacity-60" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round">
+                            <circle cx="9" cy="21" r="1" />
+                            <circle cx="20" cy="21" r="1" />
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                        </svg>
                         Sold Out
                     </button>
                     <button
-                        class="flex-1 py-2.5 border border-slate-200 text-[#0B1228] rounded-xl text-[11px] font-extrabold hover:bg-slate-50 transition-colors shadow-sm">
+                        class="flex-1 py-2 border border-slate-200 text-[#0B1228] rounded-xl text-[11px] font-bold hover:bg-slate-50 transition-colors">
                         View
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- PAGINATION -->
     <div class="flex items-center justify-end gap-2">
