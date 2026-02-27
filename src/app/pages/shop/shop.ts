@@ -22,6 +22,10 @@ export class Shop implements AfterViewInit {
   filterSupplier = '';
   maxPrice = 900;
 
+  showModal = false;
+  selectedProduct: any = null;
+  quantity = 1;
+
   products = [
     {
       name: 'ProSafe CO₂ Extinguisher',
@@ -123,6 +127,26 @@ export class Shop implements AfterViewInit {
 
   currentPage = 1;
   totalPages = [1, 2, 3, 4];
+
+  openProductModal(p: any) {
+    if (p.soldOut) return;
+    this.selectedProduct = p;
+    this.quantity = 1;
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+    this.selectedProduct = null;
+  }
+
+  addToCartAndGo() {
+    this.showModal = false;
+    this.router.navigate(['/cart']);
+  }
+
+  increaseQty() { this.quantity++; }
+  decreaseQty() { if (this.quantity > 1) this.quantity--; }
 
   goToCart() {
     this.router.navigate(['/cart']);
