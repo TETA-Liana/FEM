@@ -20,6 +20,16 @@ export interface Location {
   status: 'compliant' | 'attention' | 'critical';
 }
 
+export interface Extinguisher {
+  id: string;
+  type: string;
+  capacity: string;
+  dateRefilled: string;
+  status: 'Passed' | 'Almost Expired' | 'Expired';
+  lastInspection: string;
+  nextInspection: string;
+}
+
 @Component({
   selector: 'app-locations-dashboard',
   standalone: true,
@@ -32,6 +42,26 @@ export class LocationsDashboardComponent {
   selectedFilter = 'all';
   currentPage = 1;
   itemsPerPage = 12;
+
+  searchExtinguisherQuery = '';
+  extinguisherCurrentPage = 1;
+  extinguishersPerPage = 8;
+
+  extinguishers: Extinguisher[] = [
+    { id: 'FE-MH-001', type: 'CO₂', capacity: '5kg', dateRefilled: 'Jan 15, 2024', status: 'Passed', lastInspection: 'May 10, 2024', nextInspection: 'Nov 10, 2024' },
+    { id: 'FE-MH-002', type: 'Dry Powder', capacity: '6kg', dateRefilled: 'Feb 20, 2024', status: 'Passed', lastInspection: 'May 12, 2024', nextInspection: 'Nov 12, 2024' },
+    { id: 'FE-MH-003', type: 'Foam', capacity: '9L', dateRefilled: 'Mar 05, 2023', status: 'Almost Expired', lastInspection: 'Dec 20, 2023', nextInspection: 'Jun 20, 2024' },
+    { id: 'FE-MH-004', type: 'Dry Powder', capacity: '4kg', dateRefilled: 'Jan 28, 2024', status: 'Passed', lastInspection: 'May 08, 2024', nextInspection: 'Nov 08, 2024' },
+    { id: 'FE-MH-005', type: 'CO₂', capacity: '5kg', dateRefilled: 'Aug 10, 2022', status: 'Expired', lastInspection: 'Feb 15, 2023', nextInspection: 'May 01, 2024' },
+    { id: 'FE-MH-006', type: 'Water', capacity: '9L', dateRefilled: 'Apr 12, 2023', status: 'Almost Expired', lastInspection: 'Jan 10, 2024', nextInspection: 'Jul 10, 2024' },
+    { id: 'FE-MH-007', type: 'Dry Powder', capacity: '6kg', dateRefilled: 'Feb 18, 2024', status: 'Passed', lastInspection: 'May 15, 2024', nextInspection: 'Nov 15, 2024' },
+    { id: 'FE-MH-008', type: 'Foam', capacity: '6L', dateRefilled: 'Sep 20, 2022', status: 'Expired', lastInspection: 'Mar 15, 2023', nextInspection: 'Apr 28, 2024' },
+    // Mocking the remaining 16 items to total 24 to match the paginator count EXACTLY.
+    ...Array(16).fill(null).map((_, i) => ({
+      id: `FE-MH-00${i + 9 < 10 ? '0' : ''}${i + 9}`,
+      type: 'Dry Powder', capacity: '4kg', dateRefilled: 'Jan 20, 2024', status: 'Passed', lastInspection: 'May 05, 2024', nextInspection: 'Nov 05, 2024'
+    } as Extinguisher))
+  ];
 
   locations: Location[] = [
     {
@@ -364,5 +394,52 @@ export class LocationsDashboardComponent {
   selectLocation(location: Location) {
     console.log('Selected location:', location.name);
     // Here you could navigate to a location details page or open a modal
+  }
+
+  get filteredExtinguishers() {
+    let filtered = this.extinguishers;
+    if (this.searchExtinguisherQuery) {
+      filtered = filtered.filter(e => e.id.toLowerCase().includes(this.searchExtinguisherQuery.toLowerCase()));
+    }
+    return filtered;
+  }
+
+  get paginatedExtinguishers() {
+    const start = (this.extinguisherCurrentPage - 1) * this.extinguishersPerPage;
+    return this.filteredExtinguishers.slice(start, start + this.extinguishersPerPage);
+  }
+
+  get totalExtinguisherPages() {
+    return Math.ceil(this.filteredExtinguishers.length / this.extinguishersPerPage);
+  }
+
+  changeExtinguisherPage(page: number) {
+    if (page >= 1 && page <= this.totalExtinguisherPages) {
+      this.extinguisherCurrentPage = page;
+    }
+  }
+
+  getExtinguisherStatusClass(status: string) {
+    switch (status) {
+      case 'Passed':
+        return 'bg-[#D1FAE5] text-[#059669]';
+      case 'Almost Expired':
+        return 'bg-[#FFEDD5] text-[#D97706]';
+      case 'Expired':
+        return 'bg-[#FFE4E6] text-[#E11D48]';
+      default:
+        return 'bg-gray-100 text-gray-700';
+    }
+  }
+
+  getNextInspectionClass(status: string) {
+    switch (status) {
+      case 'Almost Expired':
+        return 'text-[#EA580C] font-extrabold';
+      case 'Expired':
+        return 'text-[#DC2626] font-extrabold';
+      default:
+        return 'text-slate-500 font-semibold';
+    }
   }
 }
