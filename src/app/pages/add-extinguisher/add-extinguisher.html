@@ -1,71 +1,45 @@
-<div class="px-8 py-6 bg-[#F6F8FC] min-h-screen font-sans">
-
-    <!-- MOCK TOP BAR (As seen in screenshot) -->
-    <div class="flex justify-end items-center gap-6 mb-10 w-full bg-white px-8 py-4 rounded-b-2xl shadow-sm -mt-6 -mx-8"
-        style="width: calc(100% + 4px);">
-        <div class="relative w-72">
-            <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C9EBB]"></i>
-            <input type="text" placeholder="Search for something"
-                class="w-full pl-11 pr-4 py-2.5 rounded-full bg-[#F3F6FD] text-xs font-medium placeholder:text-[#8C9EBB] focus:outline-none text-[#0B1228]">
-        </div>
-        <div class="flex items-center gap-4">
-            <button
-                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex flex-col items-center justify-center relative hover:bg-slate-200 transition-colors">
-                <i data-lucide="shopping-cart" class="w-4 h-4 text-[#64748B]"></i>
-                <div class="absolute top-2 right-2.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white"></div>
-            </button>
-            <button
-                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex items-center justify-center text-red-400 hover:bg-slate-200 transition-colors">
-                <i data-lucide="bell" class="w-4 h-4 text-red-500"></i>
-            </button>
-            <button
-                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex items-center justify-center text-blue-500 hover:bg-slate-200 transition-colors">
-                <i data-lucide="settings" class="w-4 h-4 text-blue-500"></i>
-            </button>
-        </div>
-    </div>
-
+<div class="px-8 py-8 bg-[#F6F8FC] min-h-screen font-sans">
     <div class="max-w-[700px]">
         <!-- UPLOAD FILE -->
-        <div class="mb-8">
-            <h3 class="text-[13px] font-extrabold text-[#0B1228] mb-3">Upload File</h3>
+        <div class="mb-10">
+            <h3 class="text-base font-extrabold text-[#0B1228] mb-4">Upload File</h3>
             <div
                 class="bg-white border border-[#E2E8F0] shadow-sm rounded-xl py-14 flex flex-col items-center justify-center">
-                <div class="w-11 h-11 rounded-full bg-[#F1F5F9] flex items-center justify-center mb-4">
-                    <i data-lucide="cloud-upload" class="w-5 h-5 text-[#94A3B8]"></i>
+                <div class="w-12 h-12 rounded-full bg-[#F1F5F9] flex items-center justify-center mb-4">
+                    <i data-lucide="cloud-upload" class="w-6 h-6 text-[#94A3B8]"></i>
                 </div>
-                <p class="text-[11px] font-semibold text-[#64748B] mb-5">Max 100 MB, PNG, JPEG, MP3, MP4</p>
+                <p class="text-xs font-semibold text-[#64748B] mb-5">Max 100 MB, PNG, JPEG, MP3, MP4</p>
                 <button
-                    class="px-6 py-2 bg-[#0B1228] hover:bg-slate-900 text-white text-[11px] font-bold rounded-lg transition-colors">
+                    class="px-6 py-2.5 bg-[#0B1228] hover:bg-slate-900 text-white text-xs font-bold rounded-lg transition-colors">
                     Browse File
                 </button>
             </div>
         </div>
 
         <!-- PURCHASE TYPE -->
-        <div class="mb-8">
-            <h3 class="text-[13px] font-extrabold text-[#0B1228] mb-3">Purchase Type</h3>
-            <div class="grid grid-cols-3 gap-4">
+        <div class="mb-10">
+            <h3 class="text-base font-extrabold text-[#0B1228] mb-4">Purchase Type</h3>
+            <div class="grid grid-cols-3 gap-5">
                 <!-- Card 1 -->
                 <div class="bg-[#EEF2FF] border border-[#6366F1] rounded-xl p-5 cursor-pointer">
-                    <h4 class="text-[11px] font-extrabold text-[#0B1228] mb-1.5">Fixed Price</h4>
-                    <p class="text-[10px] font-semibold text-[#64748B] leading-relaxed">
+                    <h4 class="text-sm font-extrabold text-[#0B1228] mb-1.5">Fixed Price</h4>
+                    <p class="text-xs font-medium text-[#64748B] leading-relaxed">
                         Set fixed price for people to buy your product instantly
                     </p>
                 </div>
                 <!-- Card 2 -->
                 <div
                     class="bg-white border border-[#E2E8F0] shadow-sm rounded-xl p-5 cursor-pointer hover:border-[#CBD5E1] transition-colors">
-                    <h4 class="text-[11px] font-extrabold text-[#0B1228] mb-1.5">Timed Auction</h4>
-                    <p class="text-[10px] font-semibold text-[#64748B] leading-relaxed">
+                    <h4 class="text-sm font-extrabold text-[#0B1228] mb-1.5">Timed Auction</h4>
+                    <p class="text-xs font-medium text-[#64748B] leading-relaxed">
                         Set fixed price for people to buy your product instantly
                     </p>
                 </div>
                 <!-- Card 3 -->
                 <div
                     class="bg-white border border-[#E2E8F0] shadow-sm rounded-xl p-5 cursor-pointer hover:border-[#CBD5E1] transition-colors">
-                    <h4 class="text-[11px] font-extrabold text-[#0B1228] mb-1.5">Open for Bids</h4>
-                    <p class="text-[10px] font-semibold text-[#64748B] leading-relaxed">
+                    <h4 class="text-sm font-extrabold text-[#0B1228] mb-1.5">Open for Bids</h4>
+                    <p class="text-xs font-medium text-[#64748B] leading-relaxed">
                         Set fixed price for people to buy your product instantly
                     </p>
                 </div>
@@ -73,54 +47,54 @@
         </div>
 
         <!-- MAIN DETAILS -->
-        <div class="mb-8">
-            <h3 class="text-[13px] font-extrabold text-[#0B1228] mb-3">Main Details</h3>
+        <div class="mb-10">
+            <h3 class="text-base font-extrabold text-[#0B1228] mb-4">Main Details</h3>
 
-            <div class="grid grid-cols-2 gap-x-4 gap-y-5 mb-5">
+            <div class="grid grid-cols-2 gap-x-5 gap-y-6 mb-6">
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Title</label>
+                    <label class="text-xs font-semibold text-[#475569]">Title</label>
                     <input type="text" value="Fire extinguisher"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Price</label>
+                    <label class="text-xs font-semibold text-[#475569]">Price</label>
                     <input type="text" value="30"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
             </div>
 
-            <div class="grid grid-cols-4 gap-4 mb-5">
+            <div class="grid grid-cols-4 gap-5 mb-6">
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Capacity</label>
+                    <label class="text-xs font-semibold text-[#475569]">Capacity</label>
                     <input type="text" value="6kg"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Category</label>
+                    <label class="text-xs font-semibold text-[#475569]">Category</label>
                     <input type="text" value="Powder"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Origin</label>
+                    <label class="text-xs font-semibold text-[#475569]">Origin</label>
                     <input type="text" value="China"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
                 <div class="flex flex-col gap-2">
-                    <label class="text-[11px] font-semibold text-[#475569]">Currency</label>
+                    <label class="text-xs font-semibold text-[#475569]">Currency</label>
                     <input type="text" value="Dollars"
-                        class="w-full px-4 py-2.5 rounded-lg border border-[#E2E8F0] text-[11px] font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
+                        class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-bold text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm">
                 </div>
             </div>
 
             <div class="flex flex-col gap-2 mb-10">
-                <label class="text-[11px] font-semibold text-[#475569]">Description</label>
+                <label class="text-xs font-semibold text-[#475569]">Description</label>
                 <textarea rows="5"
-                    class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-[11px] font-medium text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm resize-none"></textarea>
+                    class="w-full px-4 py-3 rounded-lg border border-[#E2E8F0] text-sm font-medium text-[#0B1228] focus:outline-none focus:border-[#6366F1] shadow-sm resize-none"></textarea>
             </div>
 
             <!-- SAVE BUTTON -->
             <button
-                class="flex items-center gap-2.5 px-8 py-3 bg-[#0B1228] text-white rounded-lg text-xs font-bold shadow-md hover:bg-slate-900 transition-colors">
+                class="flex items-center gap-2.5 px-8 py-3 bg-[#0B1228] text-white rounded-lg text-sm font-bold shadow-md hover:bg-slate-900 transition-colors">
                 <i data-lucide="save" class="w-4 h-4"></i>
                 <span>Save</span>
             </button>
