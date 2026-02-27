@@ -1,0 +1,238 @@
+<div class="p-8 bg-[#F6F8FC] min-h-screen font-sans">
+
+    <!-- TOP BAR -->
+    <div class="flex justify-end items-center gap-6 mb-10 w-full bg-white px-8 py-4 rounded-b-2xl shadow-sm -mt-8 -mx-8 relative z-10"
+        style="width: calc(100% + 4rem);">
+        <div class="relative w-72">
+            <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-[#8C9EBB]"></i>
+            <input type="text" placeholder="Search for something"
+                class="w-full pl-11 pr-4 py-2.5 rounded-full bg-[#F3F6FD] text-xs font-medium placeholder:text-[#8C9EBB] focus:outline-none text-[#0B1228]">
+        </div>
+        <div class="flex items-center gap-4">
+            <button
+                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex flex-col items-center justify-center relative hover:bg-slate-200 transition-colors">
+                <i data-lucide="shopping-cart" class="w-4 h-4 text-[#64748B]"></i>
+                <div class="absolute top-2 right-2.5 w-1.5 h-1.5 bg-red-500 rounded-full border border-white"></div>
+            </button>
+            <button
+                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex items-center justify-center text-red-400 hover:bg-slate-200 transition-colors">
+                <i data-lucide="bell" class="w-4 h-4 text-red-500"></i>
+            </button>
+            <button
+                class="w-10 h-10 rounded-full bg-[#F3F6FD] flex items-center justify-center text-blue-500 hover:bg-slate-200 transition-colors">
+                <i data-lucide="settings" class="w-4 h-4 text-blue-500"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- METRIC CARDS -->
+    <div class="grid grid-cols-5 gap-4 mb-8">
+        <!-- Card 1 -->
+        <div class="bg-[#0B1228] rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4 relative z-10 w-full">
+                <p class="text-[12px] font-bold text-slate-400 leading-tight">Total<br>Extinguishers</p>
+                <div class="w-8 h-8 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                    <i data-lucide="refresh-cw" class="w-4 h-4 text-[#0B1228]"></i>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-[32px] font-black text-white leading-none tracking-tight mb-2">290</h2>
+                <span
+                    class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-[#A7F3D0] text-[#059669]">+12%
+                    this month</span>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-[#0B1228] rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4 relative z-10 w-full">
+                <p class="text-[12px] font-bold text-slate-400">Inspected</p>
+                <div class="w-8 h-8 rounded-lg bg-[#A7F3D0] flex items-center justify-center shadow-sm">
+                    <i data-lucide="file-check" class="w-4 h-4 text-[#059669]"></i>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-[32px] font-black text-white leading-none tracking-tight mb-2">35</h2>
+                <span class="text-[10px] font-semibold text-slate-400">73% covered</span>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-[#0B1228] rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4 relative z-10 w-full">
+                <p class="text-[12px] font-bold text-slate-400">Needs Refill</p>
+                <div class="w-8 h-8 rounded-lg bg-[#FEF3C7] flex items-center justify-center shadow-sm">
+                    <i data-lucide="refresh-cw" class="w-4 h-4 text-[#D97706]"></i>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-[32px] font-black text-white leading-none tracking-tight mb-2">60</h2>
+                <span class="text-[10px] font-semibold text-slate-400">Scheduled for maintenance</span>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-[#DC2626] rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4 relative z-10 w-full">
+                <p class="text-[12px] font-bold text-white/90">Expired/Condem</p>
+                <div class="w-8 h-8 rounded-lg bg-white/20 flex items-center justify-center shadow-sm">
+                    <i data-lucide="trash-2" class="w-4 h-4 text-white"></i>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-[32px] font-black text-white leading-none tracking-tight mb-2">2</h2>
+                <span
+                    class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-white text-[#DC2626]">Requires
+                    Critical Action</span>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="bg-[#0B1228] rounded-xl p-5 shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-white/5 rounded-bl-full"></div>
+            <div class="flex justify-between items-start mb-4 relative z-10 w-full">
+                <p class="text-[12px] font-bold text-slate-400">Compliance</p>
+                <div
+                    class="w-8 h-8 border border-white/20 rounded flex items-center justify-center shadow-sm bg-white/5">
+                    <i data-lucide="check-square" class="w-4 h-4 text-white"></i>
+                </div>
+            </div>
+            <div class="relative z-10">
+                <h2 class="text-[32px] font-black text-white/90 leading-none tracking-tight mb-2">86%</h2>
+                <span class="text-[10px] font-semibold text-slate-400">Based on last inspections</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- FILTER SECTION -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100 p-6 mb-8 flex flex-col gap-6">
+        <div class="flex items-center gap-6">
+            <div class="w-80">
+                <input type="text" placeholder="Search report name..."
+                    class="w-full px-4 py-2.5 rounded-lg border border-slate-200 text-xs font-semibold placeholder:text-slate-400 outline-none focus:border-slate-300">
+            </div>
+
+            <div class="flex items-center gap-3">
+                <span class="text-xs font-extrabold text-[#0B1228] uppercase tracking-wider mr-2">Filter by type:</span>
+                <button *ngFor="let filter of filters"
+                    [ngClass]="activeFilter === filter ? 'bg-[#0B1228] text-white' : 'bg-slate-100 text-slate-600 hover:bg-slate-200'"
+                    (click)="activeFilter = filter" class="px-5 py-2 rounded-full text-xs font-bold transition-colors">
+                    {{ filter }}
+                </button>
+            </div>
+        </div>
+
+        <div class="flex flex-wrap items-center justify-between border-t border-slate-100 pt-6">
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-extrabold text-[#0B1228] uppercase tracking-wider">Date Range:</span>
+                <input type="text"
+                    class="w-36 px-4 py-2 rounded-lg border border-slate-200 text-xs font-semibold outline-none focus:border-slate-300 bg-white shadow-sm">
+                <span class="text-xs font-bold text-slate-400">to</span>
+                <input type="text"
+                    class="w-36 px-4 py-2 rounded-lg border border-slate-200 text-xs font-semibold outline-none focus:border-slate-300 bg-white shadow-sm">
+            </div>
+
+            <button
+                class="px-8 py-2.5 bg-[#0B1228] text-white rounded-lg text-xs font-bold shadow-sm hover:bg-slate-900 transition-colors">
+                Apply Filters
+            </button>
+        </div>
+    </div>
+
+    <!-- REPORTS LIST -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-100">
+        <!-- Header -->
+        <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+            <div>
+                <h3 class="text-[18px] font-extrabold text-[#0B1228] tracking-tight">Generated Reports</h3>
+                <p class="text-[11px] font-semibold text-slate-500 mt-1">Read-only archive • Download anytime</p>
+            </div>
+            <button
+                class="flex items-center gap-2 px-5 py-2 bg-white border border-slate-200 rounded-lg text-xs font-bold text-slate-700 hover:bg-slate-50 transition-colors shadow-sm">
+                <i data-lucide="file-down" class="w-3.5 h-3.5 text-slate-500"></i>
+                <span>Export All</span>
+            </button>
+        </div>
+
+        <!-- Table -->
+        <div class="overflow-x-auto">
+            <table class="w-full text-left">
+                <thead>
+                    <tr class="border-b border-slate-100">
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest pl-6">
+                            REPORT NAME</th>
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest">REPORT
+                            TYPE</th>
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest">DATE
+                            GENERATED</th>
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest">
+                            GENERATED BY</th>
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest">FORMAT
+                        </th>
+                        <th class="py-4 px-6 text-[10px] font-extrabold text-[#0B1228] uppercase tracking-widest pr-8">
+                            ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let r of reports; let last = last" [ngClass]="{'border-b border-slate-100': !last}">
+                        <td class="py-6 px-6 align-top">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 shadow-sm"
+                                    [ngClass]="r.iconClass">
+                                    <i [attr.data-lucide]="r.icon" class="w-5 h-5 text-white"></i>
+                                </div>
+                                <div class="flex flex-col gap-1 w-44">
+                                    <span class="text-xs font-extrabold text-[#0B1228] leading-tight">{{ r.name
+                                        }}</span>
+                                    <span class="text-[10px] font-semibold text-slate-500 leading-snug">{{ r.description
+                                        }}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-6 px-6 align-top">
+                            <span
+                                class="inline-flex mt-1 items-center gap-1.5 px-3 py-1.5 rounded-lg text-[10px] font-bold"
+                                [ngClass]="r.typeClass">
+                                <i *ngIf="r.type === 'Inspection Compliance'" data-lucide="check-circle"
+                                    class="w-3.5 h-3.5"></i>
+                                <i *ngIf="r.type === 'Expired'" data-lucide="alert-circle" class="w-3.5 h-3.5"></i>
+                                <i *ngIf="r.type === 'Location Summary'" data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+                                <span>{{ r.type }}</span>
+                            </span>
+                        </td>
+                        <td class="py-6 px-6 align-top">
+                            <div class="flex flex-col gap-1 mt-1 border-l border-transparent">
+                                <span class="text-xs font-extrabold text-[#0B1228]">{{ r.date }}</span>
+                                <span class="text-[10px] font-semibold text-slate-500">{{ r.time }}</span>
+                            </div>
+                        </td>
+                        <td class="py-6 px-6 align-top">
+                            <div class="flex flex-row items-center gap-3 mt-1">
+                                <img [src]="r.authorAvatar" alt="" class="w-9 h-9 rounded-full bg-slate-200 shrink-0">
+                                <div class="flex flex-col gap-1">
+                                    <span class="text-xs font-extrabold text-[#0B1228]">{{ r.author }}</span>
+                                    <span class="text-[10px] font-semibold text-slate-500">{{ r.role }}</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="py-6 px-6 align-top">
+                            <span
+                                class="inline-flex mt-1 items-center gap-1.5 px-4 py-2 rounded-lg text-[11px] font-bold shadow-sm"
+                                [ngClass]="r.formatClass">
+                                <i [attr.data-lucide]="r.formatIcon" class="w-4 h-4 text-white"></i>
+                                <span>{{ r.format }}</span>
+                            </span>
+                        </td>
+                        <td class="py-6 px-6 pr-8 align-top">
+                            <button
+                                class="flex items-center gap-2.5 mt-1 px-6 py-2.5 bg-[#0B1228] text-white rounded-xl text-[11px] font-extrabold shadow-sm hover:bg-slate-900 transition-colors">
+                                <i data-lucide="cloud-download" class="w-4 h-4"></i>
+                                <span>Download</span>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
