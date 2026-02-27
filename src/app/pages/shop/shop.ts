@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
 
@@ -12,6 +13,8 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
   styleUrl: './shop.css',
 })
 export class Shop implements AfterViewInit {
+
+  constructor(private router: Router) { }
 
   filterType = '';
   filterCapacity = '';
@@ -120,6 +123,10 @@ export class Shop implements AfterViewInit {
 
   currentPage = 1;
   totalPages = [1, 2, 3, 4];
+
+  goToCart() {
+    this.router.navigate(['/cart']);
+  }
 
   ngAfterViewInit() {
     setTimeout(() => {
