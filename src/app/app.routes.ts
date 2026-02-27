@@ -6,6 +6,7 @@ import { ExtinguishersComponent } from './pages/extinguishers/extinguishers.comp
 import { ServiceRequestsComponent } from './pages/service-requests/service-requests.component';
 import { InspectorsOverviewComponent } from './pages/inspectors-overview/inspectors-overview.component';
 import { LocationsDashboardComponent } from './pages/locations-dashboard/locations-dashboard.component';
+import { AddExtinguisher } from './pages/add-extinguisher/add-extinguisher';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -14,6 +15,7 @@ export const routes: Routes = [
   { path: 'extinguishers', component: ExtinguishersComponent },
   { path: 'service-requests', component: ServiceRequestsComponent },
   { path: 'inspectors', component: InspectorsOverviewComponent },
-  { path: 'locations', component: LocationsDashboardComponent }
+  { path: 'locations', component: LocationsDashboardComponent },
+  { path: 'add-extinguisher', component: AddExtinguisher }
 ];
 

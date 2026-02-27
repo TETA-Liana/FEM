@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 export interface Location {
   id: string;
@@ -33,7 +34,7 @@ export interface Extinguisher {
 @Component({
   selector: 'app-locations-dashboard',
   standalone: true,
-  imports: [FormsModule, CommonModule],
+  imports: [FormsModule, CommonModule, RouterModule],
   templateUrl: './locations-dashboard.component.html',
   styleUrls: ['./locations-dashboard.component.css']
 })
