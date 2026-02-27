@@ -10,6 +10,7 @@ import { AddExtinguisher } from './pages/add-extinguisher/add-extinguisher';
 import { Reports } from './pages/reports/reports';
 import { Shop } from './pages/shop/shop';
 import { Cart } from './pages/cart/cart';
+import { Checkout } from './pages/checkout/checkout';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -22,6 +23,7 @@ export const routes: Routes = [
   { path: 'add-extinguisher', component: AddExtinguisher },
   { path: 'reports', component: Reports },
   { path: 'shop', component: Shop },
-  { path: 'cart', component: Cart }
+  { path: 'cart', component: Cart },
+  { path: 'checkout', component: Checkout }
 ];
 

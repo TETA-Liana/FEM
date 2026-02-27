@@ -65,4 +65,5 @@ export class Cart {
   clearCart() { this.items = []; }
 
   continueShopping() { this.router.navigate(['/shop']); }
+  goToCheckOut() { this.router.navigate(['/checkout']); }
 }
