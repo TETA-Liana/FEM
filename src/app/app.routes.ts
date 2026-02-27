@@ -8,6 +8,7 @@ import { InspectorsOverviewComponent } from './pages/inspectors-overview/inspect
 import { LocationsDashboardComponent } from './pages/locations-dashboard/locations-dashboard.component';
 import { AddExtinguisher } from './pages/add-extinguisher/add-extinguisher';
 import { Reports } from './pages/reports/reports';
+import { Shop } from './pages/shop/shop';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -18,6 +19,7 @@ export const routes: Routes = [
   { path: 'inspectors', component: InspectorsOverviewComponent },
   { path: 'locations', component: LocationsDashboardComponent },
   { path: 'add-extinguisher', component: AddExtinguisher },
-  { path: 'reports', component: Reports }
+  { path: 'reports', component: Reports },
+  { path: 'shop', component: Shop }
 ];
 
