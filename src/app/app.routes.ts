@@ -14,6 +14,7 @@ import { Checkout } from './pages/checkout/checkout';
 
 import { ViewExtinguisherComponent } from './pages/view-extinguisher/view-extinguisher.component';
 import { SettingsComponent } from './pages/settings/settings.component';
+import { NotificationsComponent } from './pages/notifications/notifications.component';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -26,6 +27,7 @@ export const routes: Routes = [
   { path: 'add-extinguisher', component: AddExtinguisher },
   { path: 'view-extinguisher/:id', component: ViewExtinguisherComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: 'notifications', component: NotificationsComponent },
   { path: 'reports', component: Reports },
   { path: 'shop', component: Shop },
   { path: 'cart', component: Cart },

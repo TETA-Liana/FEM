@@ -1,9 +1,13 @@
 import { AfterViewInit, Component } from '@angular/core';
 
+import { RouterModule } from '@angular/router';
+
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
 
 @Component({
   selector: 'app-dashboard',
+  standalone: true,
+  imports: [RouterModule],
   templateUrl: './dashboard.html'
 })
 export class DashboardComponent implements AfterViewInit {
