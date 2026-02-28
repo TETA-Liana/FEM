@@ -12,6 +12,8 @@ import { Shop } from './pages/shop/shop';
 import { Cart } from './pages/cart/cart';
 import { Checkout } from './pages/checkout/checkout';
 
+import { ViewExtinguisherComponent } from './pages/view-extinguisher/view-extinguisher.component';
+
 export const routes: Routes = [
   { path: '', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
@@ -21,6 +23,7 @@ export const routes: Routes = [
   { path: 'inspectors', component: InspectorsOverviewComponent },
   { path: 'locations', component: LocationsDashboardComponent },
   { path: 'add-extinguisher', component: AddExtinguisher },
+  { path: 'view-extinguisher/:id', component: ViewExtinguisherComponent },
   { path: 'reports', component: Reports },
   { path: 'shop', component: Shop },
   { path: 'cart', component: Cart },
