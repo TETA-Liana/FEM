@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs/operators';
 import { SidebarComponent } from '../layout/sidebar/sidebar';
-import { Topbar} from '../layout/topbar/topbar';
+import { Topbar } from '../layout/topbar/topbar';
 
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
 
@@ -22,7 +22,8 @@ export class AppComponent {
   /** Show sidebar and topbar only for dashboard (and other app routes), not for sign-in/sign-up. */
   showLayout(): boolean {
     const path = this.router.url.split('?')[0];
-    return path !== '/' && path !== '/signin' && path !== '/signup';
+    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard'];
+    return !excludedRoutes.includes(path);
   }
 
   private runCreateIcons(): void {

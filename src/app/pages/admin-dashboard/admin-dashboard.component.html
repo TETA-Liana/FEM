@@ -1,0 +1,452 @@
+<div class="flex min-h-screen bg-[#F8FAFC] font-['Poppins']">
+    <!-- SIDEBAR: Specific for Admin Dashboard -->
+    <aside class="w-64 bg-[#0B1437] shrink-0 flex flex-col">
+        <!-- LOGO -->
+        <div class="p-6 pb-10 flex items-center gap-3">
+            <div class="w-10 h-10 flex items-center justify-center">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-white">
+                    <path d="M12 2C12 2 15 5 15 8.5C15 11 13 12 12 13C11 12 9 11 9 8.5C9 5 12 2 12 2Z" fill="white" />
+                    <path
+                        d="M12 21C16.9706 21 21 16.9706 21 12C21 10.3333 20.3333 8.83333 19.5 7.5C18 10 16 11.5 14 12C16 9 15.5 5.5 14 3.5C12.5 5.5 11.5 8 12 11C10 10.5 8 9.5 6.5 7C5.83333 8.33333 5 9.83333 5 11.5C5 16.9706 9.02944 21 14 21"
+                        fill="white" fill-opacity="0.8" />
+                    <path
+                        d="M12 17C13.6569 17 15 15.6569 15 14C15 12.5 13.5 11.5 12 11C10.5 11.5 9 12.5 9 14C9 15.6569 10.3431 17 12 17Z"
+                        fill="white" />
+                </svg>
+            </div>
+            <span class="text-3xl font-black text-white tracking-widest">FEM</span>
+        </div>
+
+        <!-- NAV -->
+        <nav class="flex-1 px-4 space-y-1">
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/10 text-white font-semibold">
+                <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <div class="pt-6 pb-3">
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4 mb-4">Operations</p>
+                <div class="space-y-1">
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors">
+                        <i data-lucide="users" class="w-5 h-5"></i>
+                        <span>Clients</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        <span>Locations</span>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors justify-between">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="flame" class="w-5 h-5"></i>
+                            <span>Fire Extinguishers</span>
+                        </div>
+                        <i data-lucide="chevron-right" class="w-3.5 h-3.5 opacity-50"></i>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors justify-between">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                            <span>Inspections</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 opacity-50"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-6 pb-3">
+                <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest px-4 mb-4">Management</p>
+                <div class="space-y-1">
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors justify-between">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="users-round" class="w-5 h-5"></i>
+                            <span>Users & Inspectors</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 opacity-50"></i>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors justify-between">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            <span>Alerts & Compliance</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 opacity-50"></i>
+                    </a>
+                    <a
+                        class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors justify-between">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="repeat" class="w-5 h-5"></i>
+                            <span>Refills</span>
+                        </div>
+                        <i data-lucide="chevron-down" class="w-3.5 h-3.5 opacity-50"></i>
+                    </a>
+                </div>
+            </div>
+
+            <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-300 hover:bg-white/5 transition-colors">
+                <i data-lucide="settings" class="w-5 h-5"></i>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <!-- PROFILE BLOCK -->
+        <div class="p-6 mt-auto">
+            <div class="bg-white/5 rounded-2xl p-4 flex items-center gap-3 border border-white/5">
+                <div
+                    class="w-10 h-10 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                    <img src="https://ui-avatars.com/api/?name=Usanase&background=FFC107&color=fff" alt="Profile"
+                        class="w-full h-full object-cover">
+                </div>
+                <div class="min-w-0">
+                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Welcome Back</p>
+                    <p class="text-xs font-black text-white truncate">Usanase</p>
+                </div>
+                <i data-lucide="chevron-up" class="w-3.5 h-3.5 text-slate-500 ml-auto"></i>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="flex-1 flex flex-col bg-white">
+        <!-- TOPBAR IN-PAGE -->
+        <header
+            class="h-16 border-b border-slate-100 flex items-center justify-between px-8 bg-white/80 backdrop-blur-sm sticky top-0 z-10 w-full">
+            <div class="relative w-96">
+                <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" placeholder="Search for something"
+                    class="w-full pl-10 pr-4 py-2 bg-slate-50 rounded-xl border border-slate-100 text-sm focus:outline-none focus:ring-2 focus:ring-[#0B1437]/10">
+            </div>
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <button
+                        class="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500 relative">
+                        <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                        <span
+                            class="absolute -top-1 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+                    </button>
+                </div>
+                <div class="relative">
+                    <button
+                        class="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-red-400 relative">
+                        <i data-lucide="bell" class="w-4 h-4"></i>
+                        <span
+                            class="absolute -top-1 -right-0.5 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+                    </button>
+                </div>
+                <button
+                    class="w-9 h-9 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-500">
+                    <i data-lucide="settings" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </header>
+
+        <div class="p-8 space-y-8 bg-[#F8FAFC]">
+            <!-- TOP STATS -->
+            <div class="grid grid-cols-3 gap-6">
+                <!-- Earnings -->
+                <div class="bg-[#0B1437] rounded-3xl p-8 text-white relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[80px] group-hover:scale-110 transition-transform">
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Earnings</h3>
+                        <span
+                            class="text-[10px] font-bold text-slate-400 underline cursor-pointer hover:text-white transition-colors">Detail</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <h2 class="text-3xl font-black mb-4">5000000 rwf</h2>
+                            <div
+                                class="flex items-center gap-2 px-2.5 py-1 bg-white/10 rounded-lg text-[10px] font-bold w-max border border-white/5">
+                                <i data-lucide="arrow-up" class="w-3 h-3 text-emerald-400"></i>
+                                <span class="text-white">+1.23%</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-white/10">
+                            <i data-lucide="dollar-sign" class="w-6 h-6 text-[#0B1437]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Orders -->
+                <div class="bg-[#0B1437] rounded-3xl p-8 text-white relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[80px] group-hover:scale-110 transition-transform">
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Orders</h3>
+                        <span
+                            class="text-[10px] font-bold text-slate-400 underline cursor-pointer hover:text-white transition-colors">Detail</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <h2 class="text-3xl font-black mb-4">40</h2>
+                            <div
+                                class="flex items-center gap-2 px-2.5 py-1 bg-white/10 rounded-lg text-[10px] font-bold w-max border border-white/5">
+                                <i data-lucide="arrow-up" class="w-3 h-3 text-emerald-400"></i>
+                                <span class="text-white">+1.23%</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-white/10">
+                            <i data-lucide="shopping-cart" class="w-6 h-6 text-[#0B1437]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customers -->
+                <div class="bg-[#0B1437] rounded-3xl p-8 text-white relative overflow-hidden group">
+                    <div
+                        class="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-[80px] group-hover:scale-110 transition-transform">
+                    </div>
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest">Total Customers</h3>
+                        <span
+                            class="text-[10px] font-bold text-slate-400 underline cursor-pointer hover:text-white transition-colors">Detail</span>
+                    </div>
+                    <div class="flex items-end justify-between">
+                        <div>
+                            <h2 class="text-3xl font-black mb-4">1000</h2>
+                            <div
+                                class="flex items-center gap-2 px-2.5 py-1 bg-white/10 rounded-lg text-[10px] font-bold w-max border border-white/5">
+                                <i data-lucide="arrow-up" class="w-3 h-3 text-emerald-400"></i>
+                                <span class="text-white">+1.23%</span>
+                            </div>
+                        </div>
+                        <div
+                            class="w-12 h-12 rounded-full bg-white flex items-center justify-center shadow-lg border-4 border-white/10">
+                            <i data-lucide="users" class="w-6 h-6 text-[#0B1437]"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MIDDLE SECTION (CHART & MAP) -->
+            <div class="grid grid-cols-12 gap-6">
+                <!-- Order Status Graph -->
+                <div
+                    class="col-span-8 bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm relative overflow-hidden">
+                    <div class="flex justify-between items-center mb-10">
+                        <h3 class="text-lg font-black tracking-tight">Order Status</h3>
+                        <div class="flex items-center gap-6">
+                            <div class="flex items-center gap-2">
+                                <div class="w-2h-2 rounded-full bg-red-500 h-2 w-2"></div>
+                                <span class="text-[11px] font-bold text-slate-400">Order</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-2h-2 rounded-full bg-blue-500 h-2 w-2"></div>
+                                <span class="text-[11px] font-bold text-slate-400">Store</span>
+                            </div>
+                            <div class="flex gap-2 ml-4">
+                                <button
+                                    class="px-3 py-1 rounded-lg text-[10px] font-bold text-indigo-600 bg-indigo-50">Daily</button>
+                                <button
+                                    class="px-3 py-1 rounded-lg text-[10px] font-bold text-slate-400 hover:text-slate-600">Weekly</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOCK CHART -->
+                    <div class="h-64 relative">
+                        <div class="absolute inset-0 flex flex-col justify-between">
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[10px] font-bold text-slate-300 w-8">1000</span>
+                                <div class="flex-1 border-t border-slate-50"></div>
+                            </div>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[10px] font-bold text-slate-300 w-8">600</span>
+                                <div class="flex-1 border-t border-slate-50"></div>
+                            </div>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[10px] font-bold text-slate-300 w-8">300</span>
+                                <div class="flex-1 border-t border-slate-50"></div>
+                            </div>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[10px] font-bold text-slate-300 w-8">100</span>
+                                <div class="flex-1 border-t border-slate-50"></div>
+                            </div>
+                        </div>
+                        <!-- SVG WAVE CHART MOCK -->
+                        <svg class="absolute inset-0 h-full w-full" preserveAspectRatio="none">
+                            <path d="M0,150 Q100,50 200,80 T400,120 T600,60 T800,100" fill="none" stroke="#4F46E5"
+                                stroke-width="3" stroke-linecap="round" />
+                            <path d="M0,180 Q150,140 300,160 T600,100 T800,140" fill="none" stroke="#EF4444"
+                                stroke-width="3" stroke-linecap="round" />
+                            <!-- Fill Areas -->
+                            <path d="M0,150 Q100,50 200,80 T400,120 T600,60 T800,100 V256 H0 Z" fill="url(#blueGrad)"
+                                fill-opacity="0.05" />
+                        </svg>
+                        <defs>
+                            <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#4F46E5" />
+                                <stop offset="100%" stop-color="transparent" />
+                            </linearGradient>
+                        </defs>
+                    </div>
+                    <div
+                        class="flex justify-between px-12 mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                        <span>Nov 01</span>
+                        <span>Nov 02</span>
+                        <span>Nov 03</span>
+                        <span>Nov 04</span>
+                        <span>Nov 06</span>
+                    </div>
+                </div>
+
+                <!-- Sales by Locations -->
+                <div class="col-span-4 bg-white rounded-[32px] p-8 border border-slate-100 shadow-sm">
+                    <h3 class="text-lg font-black tracking-tight mb-8">Sales by Locations</h3>
+
+                    <div
+                        class="relative bg-slate-50/50 rounded-2xl h-48 mb-8 flex items-center justify-center border border-slate-100 p-4">
+                        <!-- Placeholder for Rwanda Map SVG/Image -->
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Rwanda_Location_Map.svg/500px-Rwanda_Location_Map.svg.png"
+                            alt="Rwanda Map" class="h-full object-contain opacity-40">
+
+                        <!-- Pin Points -->
+                        <div
+                            class="absolute top-1/2 left-1/3 w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow-lg animate-pulse">
+                        </div>
+                        <div
+                            class="absolute top-1/3 left-2/3 w-4 h-4 rounded-full bg-red-500 border-2 border-white shadow-lg animate-pulse">
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-black text-[#0B1437]">Rubavu</span>
+                            </div>
+                            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-blue-600 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-black text-[#0B1437]">Gatsata</span>
+                            </div>
+                            <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full bg-red-500 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECENT ORDERS TABLE -->
+            <div class="bg-white rounded-[32px] border border-slate-100 shadow-sm overflow-hidden mb-8">
+                <div class="p-8">
+                    <h3 class="text-lg font-black tracking-tight">Recent Order</h3>
+                </div>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left">
+                        <thead>
+                            <tr class="bg-slate-50/50">
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">Id
+                                </th>
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                    Company name</th>
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                    Product</th>
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                    Category</th>
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                    Amount</th>
+                                <th class="py-5 px-8 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                                    Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-50">
+                            <tr class="hover:bg-slate-50/50 transition-colors">
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">A0B1C017</td>
+                                <td class="py-6 px-8 text-[13px] font-black text-[#0B1437]">Rwanda Coding Academy</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">Powder</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-600">30000 rwf</td>
+                                <td class="py-6 px-8">
+                                    <span
+                                        class="px-4 py-1.5 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-lg uppercase">Complete</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 transition-colors">
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">A0B1C061</td>
+                                <td class="py-6 px-8 text-[13px] font-black text-[#0B1437]">Muhabura TSS</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">CO₂</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-600">50000 rwf</td>
+                                <td class="py-6 px-8">
+                                    <span
+                                        class="px-4 py-1.5 bg-red-50 text-red-600 text-[10px] font-black rounded-lg uppercase">Cancelled</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 transition-colors">
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">A0B1C049</td>
+                                <td class="py-6 px-8 text-[13px] font-black text-[#0B1437]">Kanombe Airport</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">Water</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-600">50000 rwf</td>
+                                <td class="py-6 px-8">
+                                    <span
+                                        class="px-4 py-1.5 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-lg uppercase">Complete</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 transition-colors">
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">A0B1C029</td>
+                                <td class="py-6 px-8 text-[13px] font-black text-[#0B1437]">GS Nyabihu</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-400">Sand</td>
+                                <td class="py-6 px-8 text-[13px] font-bold text-slate-600">1000000 rwf</td>
+                                <td class="py-6 px-8">
+                                    <span
+                                        class="px-4 py-1.5 bg-emerald-50 text-emerald-600 text-[10px] font-black rounded-lg uppercase">Complete</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- PAGINATION -->
+                <div class="px-8 py-6 flex items-center justify-between border-t border-slate-50 bg-white">
+                    <div class="flex items-center gap-3">
+                        <span class="text-sm font-bold text-slate-400">Showing</span>
+                        <div class="relative">
+                            <select
+                                class="appearance-none px-4 py-2 bg-slate-50 border border-slate-100 rounded-xl text-sm font-black text-[#0B1437] pr-10 focus:outline-none">
+                                <option>10</option>
+                            </select>
+                            <i data-lucide="chevron-down"
+                                class="w-4 h-4 absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                        </div>
+                        <span class="text-sm font-bold text-slate-400">of 50</span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-400 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+                        </button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg bg-[#0B1437] text-white text-xs font-black">1</button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">2</button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">3</button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">4</button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-600 text-xs font-bold hover:bg-slate-50 transition-colors">5</button>
+                        <button
+                            class="w-8 h-8 flex items-center justify-center rounded-lg border border-slate-100 text-slate-400 hover:bg-slate-100 transition-colors">
+                            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

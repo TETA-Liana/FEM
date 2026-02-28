@@ -15,11 +15,13 @@ import { Checkout } from './pages/checkout/checkout';
 import { ViewExtinguisherComponent } from './pages/view-extinguisher/view-extinguisher.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
+import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'extinguishers', component: ExtinguishersComponent },
   { path: 'service-requests', component: ServiceRequestsComponent },
   { path: 'inspectors', component: InspectorsOverviewComponent },
