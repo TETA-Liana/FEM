@@ -17,6 +17,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { NotificationsComponent } from './pages/notifications/notifications.component';
 import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard.component';
 import { ClientsDashboard } from './pages/clients-dashboard/clients-dashboard';
+import { AdminLocationsDashboard } from './pages/admin-locations-dashboard/admin-locations-dashboard';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -24,6 +25,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'clients', component: ClientsDashboard },
+  { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'extinguishers', component: ExtinguishersComponent },
   { path: 'service-requests', component: ServiceRequestsComponent },
   { path: 'inspectors', component: InspectorsOverviewComponent },
