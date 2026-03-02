@@ -479,7 +479,7 @@
                                         class="text-[11px]">{{ext.nextInspection}}</span>
                                 </td>
                                 <td class="py-5 px-6 text-center">
-                                    <button
+                                    <button [routerLink]="['/admin-view-extinguisher', ext.id]"
                                         class="px-5 py-2 bg-[#0B1437] text-white text-[10px] font-black rounded-lg hover:bg-blue-900 transition-all active:scale-95 shadow-lg shadow-blue-900/5">View</button>
                                 </td>
                             </tr>
