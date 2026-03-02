@@ -2,103 +2,111 @@
     <!-- SIDEBAR: Specific for Admin Dashboard -->
     <aside class="w-48 bg-[#0B1437] shrink-0 flex flex-col h-screen sticky top-0">
         <!-- LOGO -->
-        <div class="px-4 py-3 mb-2 flex items-center gap-2">
-            <div class="w-6 h-6 bg-blue-600 rounded-lg flex items-center justify-center p-1">
-                <i data-lucide="flame" class="w-3.5 h-3.5 text-white"></i>
+        <div class="px-4 py-4 mb-2 flex items-center gap-2">
+            <div
+                class="w-6 h-6 bg-blue-600 rounded-lg flex items-center justify-center p-1 shadow-lg shadow-blue-500/20">
+                <i data-lucide="flame" class="icon-xs text-white"></i>
             </div>
-            <span class="text-sm font-black text-white tracking-widest leading-none">FEM</span>
+            <span class="text-xs font-black text-white tracking-[0.2em] leading-none">FEM</span>
         </div>
 
         <!-- NAV -->
-        <nav class="flex-1 px-2 flex flex-col justify-between pt-2 pb-8">
+        <nav class="flex-1 px-3 flex flex-col justify-between pt-2 pb-8">
             <div>
-                <a class="flex items-center gap-2 px-2.5 py-1.5 rounded-md bg-white/10 text-white font-semibold">
-                    <i data-lucide="layout-grid" class="w-3 h-3 text-white"></i>
-                    <span class="text-[11px]">Dashboard</span>
+                <a
+                    class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-white/10 text-white font-semibold transition-all hover:bg-white/15 cursor-pointer">
+                    <i data-lucide="layout-grid" class="icon-xs text-white shrink-0"></i>
+                    <span class="text-[10px] tracking-wide">Dashboard</span>
                 </a>
             </div>
 
-            <div class="mt-10 mb-6">
-                <p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest px-2.5 mb-5">Operations</p>
+            <div class="mt-8 mb-4 pt-2">
+                <p class="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em] px-3 mb-4 opacity-50">
+                    Operations</p>
                 <div class="space-y-1">
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors">
-                        <i data-lucide="users" class="w-3 h-3 opacity-50"></i>
-                        <span class="text-[11px]">Clients</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white group cursor-pointer">
+                        <i data-lucide="users" class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                        <span class="text-[10px] tracking-wide font-medium">Clients</span>
                     </a>
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors">
-                        <i data-lucide="map-pin" class="w-3 h-3 opacity-50"></i>
-                        <span class="text-[11px]">Locations</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white group cursor-pointer">
+                        <i data-lucide="map-pin" class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                        <span class="text-[10px] tracking-wide font-medium">Locations</span>
                     </a>
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors justify-between group">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="flame" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                            <span class="text-[11px]">Fire Extinguishers</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="flame" class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[10px] tracking-wide font-medium">Fire Extinguishers</span>
                         </div>
-                        <i data-lucide="chevron-right" class="w-2.5 h-2.5 opacity-30"></i>
+                        <i data-lucide="chevron-right" class="w-2.5 h-2.5 opacity-20 group-hover:opacity-50"></i>
                     </a>
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors justify-between group">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="clipboard-check" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                            <span class="text-[11px]">Inspections</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="clipboard-check"
+                                class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[10px] tracking-wide font-medium">Inspections</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-30"></i>
+                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-20 group-hover:opacity-50"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="mt-10 mb-6">
-                <p class="text-[8px] font-bold text-slate-500 uppercase tracking-widest px-2.5 mb-5">Management</p>
+            <div class="mt-8 mb-4 pt-2">
+                <p class="text-[9px] font-black text-slate-500 uppercase tracking-[0.15em] px-3 mb-4 opacity-50">
+                    Management</p>
                 <div class="space-y-1">
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors justify-between group">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="users-round" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                            <span class="text-[11px]">Users & Inspectors</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="users-round"
+                                class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[10px] tracking-wide font-medium">Users & Inspectors</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-30"></i>
+                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-20 group-hover:opacity-50"></i>
                     </a>
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors justify-between group">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="shield-check" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                            <span class="text-[11px]">Alerts & Compliance</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="shield-check"
+                                class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[10px] tracking-wide font-medium">Compliance</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-30"></i>
+                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-20 group-hover:opacity-50"></i>
                     </a>
                     <a
-                        class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors justify-between group">
-                        <div class="flex items-center gap-2">
-                            <i data-lucide="repeat" class="w-3 h-3 opacity-50 group-hover:opacity-100"></i>
-                            <span class="text-[11px]">Refills</span>
+                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-2.5">
+                            <i data-lucide="repeat" class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[10px] tracking-wide font-medium">Refills</span>
                         </div>
-                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-30"></i>
+                        <i data-lucide="chevron-down" class="w-2.5 h-2.5 opacity-20 group-hover:opacity-50"></i>
                     </a>
                 </div>
             </div>
         </nav>
 
         <!-- PROFILE & SETTINGS BLOCK -->
-        <div class="px-2 pb-4 mt-auto space-y-1">
+        <div class="px-3 pb-6 mt-auto space-y-2">
             <a
-                class="flex items-center gap-2 px-2.5 py-1.5 rounded-md text-slate-400 hover:bg-white/5 transition-colors">
-                <i data-lucide="settings" class="w-3 h-3 opacity-50"></i>
-                <span class="text-[11px]">Settings</span>
+                class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-400 hover:bg-white/5 transition-all hover:text-white group cursor-pointer">
+                <i data-lucide="settings" class="icon-xs opacity-40 group-hover:opacity-100 shrink-0"></i>
+                <span class="text-[10px] tracking-wide font-medium">Settings</span>
             </a>
-            <div class="bg-white/5 rounded-lg p-2 flex items-center gap-2 border border-white/5">
+            <div
+                class="bg-white/5 rounded-xl p-3 flex items-center gap-2.5 border border-white/5 transition-all hover:bg-white/10 cursor-pointer">
                 <div
-                    class="w-7 h-7 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                    class="w-8 h-8 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-sm">
                     <img src="https://ui-avatars.com/api/?name=Usanase&background=FFC107&color=fff" alt="Profile"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="min-w-0">
-                    <p class="text-[7px] font-bold text-slate-400 uppercase tracking-widest">Welcome Back</p>
-                    <p class="text-[9px] font-black text-white truncate">Usanase</p>
+                    <p class="text-[8px] font-black text-slate-500 uppercase tracking-widest opacity-60">ADMIN</p>
+                    <p class="text-[10px] font-black text-white truncate">Usanase</p>
                 </div>
-                <i data-lucide="chevron-up" class="w-2.5 h-2.5 text-slate-500 ml-auto"></i>
+                <i data-lucide="chevron-up" class="w-3 h-3 text-slate-500 ml-auto opacity-30"></i>
             </div>
         </div>
     </aside>
@@ -107,39 +115,41 @@
     <main class="flex-1 flex flex-col bg-white">
         <!-- TOPBAR IN-PAGE -->
         <header
-            class="h-12 bg-white flex items-center justify-between px-4 sticky top-0 z-10 w-full border-b border-slate-50">
-            <div class="relative w-56">
-                <i data-lucide="search" class="w-3 h-3 absolute left-3 top-1/2 -translate-y-1/2 text-blue-500"></i>
-                <input type="text" placeholder="Search for something"
-                    class="w-full pl-8 pr-4 py-1 bg-slate-50/50 rounded-full border border-slate-100 text-[9px] focus:outline-none focus:ring-1 focus:ring-blue-500/10 transition-all">
+            class="h-12 bg-white flex items-center justify-between px-6 sticky top-0 z-10 w-full border-b border-slate-100 shadow-sm shadow-slate-200/50">
+            <div class="relative w-64">
+                <i data-lucide="search"
+                    class="icon-xs absolute left-3 top-1/2 -translate-y-1/2 text-blue-500/50 shrink-0"></i>
+                <input type="text" placeholder="Search for something..."
+                    class="w-full pl-9 pr-4 py-2 bg-slate-50 border-none rounded-xl text-[10px] focus:outline-none focus:ring-1 focus:ring-blue-500/10 transition-all placeholder:text-slate-400">
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-3">
                 <div class="relative">
                     <button
-                        class="w-6 h-6 rounded-full bg-slate-50 flex items-center justify-center text-slate-600 relative hover:bg-slate-100 transition-colors">
-                        <i data-lucide="shopping-cart" class="w-3 h-3"></i>
+                        class="w-8 h-8 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-slate-400 relative hover:bg-slate-50 hover:text-slate-600 transition-all shadow-sm">
+                        <i data-lucide="shopping-cart" class="icon-xs shrink-0"></i>
                         <span
-                            class="absolute top-0 right-0 w-1.5 h-1.5 bg-red-500 rounded-full border border-white"></span>
+                            class="absolute top-2 right-2 w-1.5 h-1.5 bg-red-500 rounded-full border-2 border-white"></span>
                     </button>
                 </div>
                 <div class="relative">
                     <button
-                        class="w-6 h-6 rounded-full bg-red-50 flex items-center justify-center text-red-500 relative hover:bg-red-100 transition-colors">
-                        <i data-lucide="bell" class="w-3 h-3"></i>
+                        class="w-8 h-8 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-red-500/80 relative hover:bg-red-50 hover:text-red-600 transition-all shadow-sm">
+                        <i data-lucide="bell" class="icon-xs shrink-0"></i>
                         <span
-                            class="absolute top-0 right-0 w-1.5 h-1.5 bg-red-500 rounded-full border border-white"></span>
+                            class="absolute top-2 right-2 w-1.5 h-1.5 bg-red-500 rounded-full border-2 border-white"></span>
                     </button>
                 </div>
                 <button
-                    class="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-500 hover:bg-blue-100 transition-colors">
-                    <i data-lucide="settings" class="w-3 h-3"></i>
+                    class="w-8 h-8 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-blue-500/80 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-sm">
+                    <i data-lucide="settings" class="icon-xs shrink-0"></i>
                 </button>
             </div>
         </header>
 
         <div class="p-5 space-y-5 bg-[#F8FAFC]">
             <!-- TOP STATS -->
-            <div class="bg-[#0B1437] rounded-lg flex overflow-hidden border border-white/5">
+            <div
+                class="bg-[#0B1437] rounded-xl flex overflow-hidden border border-white/5 shadow-2xl shadow-blue-900/20 dashboard-card stat-card-glow transition-all">
                 <!-- Earnings -->
                 <div class="flex-1 p-5 border-r border-white/10 relative">
                     <div class="flex justify-between items-start mb-4">
@@ -148,16 +158,16 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-2xl font-bold text-white mb-3">5000000 rwf</h2>
+                            <h2 class="text-xl font-black text-white mb-2">5,000,000 <span
+                                    class="text-[10px] text-slate-500 font-bold uppercase ml-1">rwf</span></h2>
                             <div
-                                class="flex items-center gap-1 px-2 py-0.5 bg-white rounded-full text-[9px] font-bold text-slate-900 w-max">
-                                <i data-lucide="arrow-up" class="w-2.5 h-2.5"></i>
+                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div
-                            class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg transform translate-y-1">
-                            <i data-lucide="dollar-sign" class="w-5 h-5 text-blue-600"></i>
+                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                            <i data-lucide="dollar-sign" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
                 </div>
@@ -170,16 +180,15 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-2xl font-bold text-white mb-3">40</h2>
+                            <h2 class="text-xl font-black text-white mb-2">40</h2>
                             <div
-                                class="flex items-center gap-1 px-2 py-0.5 bg-white rounded-full text-[9px] font-bold text-slate-900 w-max">
-                                <i data-lucide="arrow-up" class="w-2.5 h-2.5"></i>
+                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div
-                            class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg transform translate-y-1">
-                            <i data-lucide="shopping-cart" class="w-5 h-5 text-blue-600"></i>
+                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                            <i data-lucide="shopping-cart" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
                 </div>
@@ -192,16 +201,15 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-2xl font-bold text-white mb-3">1000</h2>
+                            <h2 class="text-xl font-black text-white mb-2">1,000</h2>
                             <div
-                                class="flex items-center gap-1 px-2 py-0.5 bg-white rounded-full text-[9px] font-bold text-slate-900 w-max">
-                                <i data-lucide="arrow-up" class="w-2.5 h-2.5"></i>
+                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div
-                            class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-lg transform translate-y-1">
-                            <i data-lucide="users" class="w-5 h-5 text-blue-600"></i>
+                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                            <i data-lucide="users" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
                 </div>
@@ -259,12 +267,12 @@
                                 </linearGradient>
                             </defs>
                             <path d="M0,150 Q100,50 200,80 T400,120 T600,60 T800,100" fill="none" stroke="#4F46E5"
-                                stroke-width="3" stroke-linecap="round" />
+                                stroke-width="2" stroke-linecap="round" />
                             <path d="M0,180 Q150,140 300,160 T600,100 T800,140" fill="none" stroke="#EF4444"
-                                stroke-width="3" stroke-linecap="round" />
+                                stroke-width="2" stroke-linecap="round" />
                             <!-- Fill Areas -->
                             <path d="M0,150 Q100,50 200,80 T400,120 T600,60 T800,100 V256 H0 Z" fill="url(#blueGrad)"
-                                fill-opacity="0.05" />
+                                fill-opacity="0.03" />
                         </svg>
                     </div>
                     <div
@@ -291,13 +299,13 @@
                         </svg>
 
                         <!-- Pin Points -->
-                        <div class="absolute top-[30%] left-[65%]">
+                        <div class="absolute top-[30%] left-[65%] group cursor-pointer">
                             <i data-lucide="map-pin"
-                                class="w-8 h-8 text-red-500 fill-red-500/20 drop-shadow-md animate-bounce"></i>
+                                class="map-pin-icon text-red-500 fill-red-500 drop-shadow-md group-hover:scale-110 transition-transform shrink-0"></i>
                         </div>
-                        <div class="absolute top-[50%] left-[30%]">
+                        <div class="absolute top-[50%] left-[30%] group cursor-pointer">
                             <i data-lucide="map-pin"
-                                class="w-8 h-8 text-blue-600 fill-blue-600/20 drop-shadow-md animate-bounce"></i>
+                                class="map-pin-icon text-blue-600 fill-blue-600 drop-shadow-md group-hover:scale-110 transition-transform shrink-0"></i>
                         </div>
                     </div>
 

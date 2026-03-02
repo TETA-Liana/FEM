@@ -22,8 +22,13 @@ export class AdminDashboardComponent implements AfterViewInit {
                 lucide.createIcons();
             }
         };
+
+        // Immediate run
         run();
-        setTimeout(run, 100);
-        setTimeout(run, 400);
+
+        // Sequence of retries to catch any late rendering
+        [100, 300, 600, 1000, 2000].forEach(delay => {
+            setTimeout(run, delay);
+        });
     }
 }
