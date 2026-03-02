@@ -22,7 +22,7 @@ export class AppComponent {
   /** Show sidebar and topbar only for dashboard (and other app routes), not for sign-in/sign-up. */
   showLayout(): boolean {
     const path = this.router.url.split('?')[0];
-    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard'];
+    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/clients'];
     return !excludedRoutes.includes(path);
   }
 
