@@ -19,6 +19,7 @@ import { AdminDashboardComponent } from './pages/admin-dashboard/admin-dashboard
 import { ClientsDashboard } from './pages/clients-dashboard/clients-dashboard';
 import { AdminLocationsDashboard } from './pages/admin-locations-dashboard/admin-locations-dashboard';
 import { AdminLocationDetails } from './pages/admin-location-details/admin-location-details';
+import { AdminAddExtinguisher } from './pages/admin-add-extinguisher/admin-add-extinguisher';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -28,6 +29,7 @@ export const routes: Routes = [
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },
+  { path: 'admin-add-extinguisher', component: AdminAddExtinguisher },
   { path: 'extinguishers', component: ExtinguishersComponent },
   { path: 'service-requests', component: ServiceRequestsComponent },
   { path: 'inspectors', component: InspectorsOverviewComponent },
