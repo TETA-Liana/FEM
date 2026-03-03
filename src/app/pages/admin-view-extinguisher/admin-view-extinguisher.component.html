@@ -1,380 +1,348 @@
-<div class="flex h-screen bg-[#F8FAFC] font-['Poppins'] overflow-hidden">
-    <!-- SIDEBAR: Using width matching app core (64) -->
+<div class="flex h-screen bg-[#F4F7FE] font-['Poppins'] overflow-hidden">
+    <!-- SIDEBAR -->
     <aside class="w-64 bg-[#0B1437] shrink-0 flex flex-col h-screen sticky top-0 z-50">
         <!-- LOGO SECTION -->
-        <div class="px-7 py-8 mb-4">
+        <div class="px-8 py-10">
             <div class="flex items-center gap-3">
                 <div
                     class="w-8 h-8 bg-[#4318FF] rounded-xl flex items-center justify-center shadow-lg shadow-[#4318FF]/20">
                     <i data-lucide="flame" class="w-4 h-4 text-white"></i>
                 </div>
-                <span class="text-[14px] font-black text-white tracking-[0.25em] uppercase leading-none">FEM</span>
+                <span class="text-[20px] font-black text-white tracking-[0.1em] leading-none">FEM</span>
             </div>
         </div>
 
         <!-- NAVIGATION -->
         <nav class="flex-1 px-4 flex flex-col pt-2 pb-8 overflow-y-auto scrollbar-hide">
-            <a routerLink="/admin-dashboard"
-                class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link active mb-6">
+            <a routerLink="/admin-dashboard" class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link mb-1">
                 <i data-lucide="layout-grid" class="w-5 h-5"></i>
-                <span class="text-[11px] uppercase tracking-widest font-bold">Dashboard</span>
+                <span>Dashboard</span>
             </a>
 
-            <div class="mb-6">
-                <p class="text-[10px] font-black text-white/30 uppercase tracking-[0.25em] px-4 mb-4">Operations</p>
-                <div class="space-y-1">
-                    <a routerLink="/clients" class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link">
-                        <i data-lucide="users" class="w-5 h-5"></i>
-                        <span class="text-[11px] uppercase tracking-widest font-bold">Clients</span>
-                    </a>
-                    <a routerLink="/admin-locations"
-                        class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link">
-                        <i data-lucide="map-pin" class="w-5 h-5"></i>
-                        <span class="text-[11px] uppercase tracking-widest font-bold">Locations</span>
-                    </a>
-                    <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link group">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="flame" class="w-4 h-4"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Fire Extinguishers</span>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                    <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link group">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="clipboard-check" class="w-4 h-4"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Inspections</span>
-                        </div>
-                        <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                </div>
+            <div class="sidebar-header">Operations</div>
+            <div class="space-y-1">
+                <a routerLink="/clients" class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    <span>Clients</span>
+                </a>
+                <a routerLink="/admin-locations"
+                    class="flex items-center gap-4 px-4 py-3.5 rounded-xl sidebar-link sidebar-link-active">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                    <span>Locations</span>
+                </a>
+                <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link group">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="flame" class="w-5 h-5"></i>
+                        <span>Fire Extinguishers</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3 h-3 opacity-60"></i>
+                </a>
+                <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link group">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="clipboard-check" class="w-5 h-5"></i>
+                        <span>Inspections</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
+                </a>
             </div>
 
-            <div class="mb-4">
-                <p class="text-[10px] font-black text-white/30 uppercase tracking-[0.25em] px-4 mb-4">Management</p>
-                <div class="space-y-1">
-                    <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="users-round" class="w-5 h-5"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Users & Inspectors</span>
-                        </div>
-                        <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                    <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="shield-check" class="w-5 h-5"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Compliance</span>
-                        </div>
-                        <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                    <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="repeat" class="w-5 h-5"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Refills</span>
-                        </div>
-                        <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                    <a routerLink="/settings"
-                        class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
-                        <div class="flex items-center gap-4">
-                            <i data-lucide="settings" class="w-5 h-5"></i>
-                            <span class="text-[11px] uppercase tracking-widest font-bold">Settings</span>
-                        </div>
-                        <i data-lucide="chevron-right" class="w-3 h-3 opacity-60"></i>
-                    </a>
-                </div>
+            <div class="sidebar-header">Management</div>
+            <div class="space-y-1">
+                <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="users-round" class="w-5 h-5"></i>
+                        <span>Users & Inspectors</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
+                </a>
+                <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                        <span>Compliance</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
+                </a>
+                <a class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="repeat" class="w-5 h-5"></i>
+                        <span>Refills</span>
+                    </div>
+                    <i data-lucide="chevron-down" class="w-3 h-3 opacity-60"></i>
+                </a>
+                <a routerLink="/settings" class="flex items-center justify-between px-4 py-3.5 rounded-xl sidebar-link">
+                    <div class="flex items-center gap-4">
+                        <i data-lucide="settings" class="w-5 h-5"></i>
+                        <span>Settings</span>
+                    </div>
+                    <i data-lucide="chevron-right" class="w-3 h-3 opacity-60"></i>
+                </a>
             </div>
         </nav>
 
-        <!-- PROFILE BLOCK SECTION -->
+        <!-- PROFILE BLOCK -->
         <div class="px-5 pb-8 mt-auto">
             <div
-                class="profile-block rounded-2xl p-4 flex items-center gap-3 cursor-pointer group hover:bg-white/10 transition-all border border-white/5">
+                class="bg-white/5 rounded-2xl p-4 flex items-center gap-3 border border-white/5 hover:bg-white/10 transition-all cursor-pointer group">
                 <div
-                    class="w-10 h-10 rounded-xl bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden shadow-lg border-2 border-white/10">
+                    class="w-10 h-10 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-lg">
                     <img src="https://ui-avatars.com/api/?name=Usanase&background=FFC107&color=fff" alt="Profile"
                         class="w-full h-full object-cover">
                 </div>
-                <div class="min-w-0 flex-1">
-                    <p class="text-[9px] font-black text-white/40 uppercase tracking-[0.2em] leading-tight mb-1">ADMIN
-                    </p>
-                    <p class="text-[12px] font-black text-white truncate leading-none">Usanase</p>
+                <div class="min-w-0">
+                    <p class="text-[9px] font-black text-white/40 uppercase tracking-widest leading-none mb-1">ADMIN</p>
+                    <p class="text-[12px] font-black text-white truncate">Usanase</p>
                 </div>
-                <i data-lucide="log-out" class="w-4 h-4 text-white/30 group-hover:text-red-400 transition-colors"></i>
+                <i data-lucide="log-out"
+                    class="w-4 h-4 text-white/30 ml-auto group-hover:text-red-400 transition-colors"></i>
             </div>
         </div>
     </aside>
 
     <!-- CONTENT AREA -->
-    <main class="flex-1 flex flex-col bg-[#F8FAFC] overflow-y-auto">
-        <!-- TOP NAVBAR: Perfectly centered search and aligned profile/actions -->
+    <main class="flex-1 flex flex-col bg-[#F4F7FE] overflow-y-auto">
+        <!-- TOPBAR -->
+        <header class="topbar-container">
+            <div class="relative">
+                <i data-lucide="search" class="w-4 h-4 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" placeholder="Search for something..."
+                    class="search-input placeholder:text-slate-400 font-medium">
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="icon-btn relative">
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                    <span
+                        class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-[#F4F7FE]"></span>
+                </button>
+                <button class="icon-btn relative">
+                    <i data-lucide="bell" class="w-5 h-5 text-red-400"></i>
+                    <span
+                        class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full border-2 border-[#F4F7FE]"></span>
+                </button>
+                <button class="icon-btn">
+                    <i data-lucide="settings" class="w-5 h-5"></i>
+                </button>
+            </div>
+        </header>
 
-        <!-- PAGE CONTENT SECTION -->
-        <div class="px-10 py-10 space-y-6 animate-in fade-in duration-500">
+        <!-- PAGE CONTENT CONTAINER -->
+        <div class="px-10 py-10 space-y-8">
             <!-- BREADCRUMBS -->
-            <div class="flex items-center gap-2 text-[12px] font-bold text-slate-400 mb-2">
-                <span class="hover:text-blue-600 transition-colors cursor-pointer">Locations</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i>
-                <span class="hover:text-blue-600 transition-colors cursor-pointer">Warehouse B</span>
-                <i data-lucide="chevron-right" class="w-4 h-4 opacity-40"></i>
-                <span class="text-slate-900">{{extinguisherId}}</span>
+            <div class="flex items-center gap-2 text-[11px] font-semibold text-slate-400">
+                <span>Locations</span>
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-50"></i>
+                <span>Warehouse B</span>
+                <i data-lucide="chevron-right" class="w-3 h-3 opacity-50"></i>
+                <span class="text-navy-main font-bold">FE-2024-X9</span>
             </div>
 
-            <!-- HEADER SECTION -->
-            <div class="flex justify-between items-end mb-6">
-                <div class="flex items-center gap-5">
-                    <h1 class="text-[36px] font-black text-navy-main tracking-tight">Extinguisher {{extinguisherId}}
-                    </h1>
-                    <span
-                        class="px-4 py-2 bg-[#EEFDF6] text-[#059669] border border-[#D1FAE5] rounded-full text-[11px] font-black uppercase tracking-widest flex items-center gap-2 shadow-sm">
-                        <div class="w-2 h-2 rounded-full bg-[#059669]"></div>
+            <!-- HEADER ACTIONS -->
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-4">
+                    <h1 class="text-[28px] font-black text-navy-main tracking-tight leading-none text-nowrap">
+                        Extinguisher FE-2024-X9</h1>
+                    <span class="status-pill status-passed">
+                        <div class="w-1.5 h-1.5 bg-[#059669] rounded-full"></div>
                         Operational
                     </span>
                 </div>
                 <div class="flex items-center gap-3">
-                    <button
-                        class="px-8 py-3 bg-white border border-[#E9EDF7] text-navy-main rounded-2xl text-[12px] font-black shadow-sm hover:translate-y-[-2px] transition-all uppercase tracking-widest">Edit</button>
-                    <button
-                        class="px-8 py-3 bg-white border border-[#E9EDF7] text-navy-main rounded-2xl text-[12px] font-black shadow-sm hover:translate-y-[-2px] transition-all uppercase tracking-widest">Mark
-                        Refilled</button>
-                    <button
-                        class="px-8 py-3 bg-[#111C44] text-white rounded-2xl text-[12px] font-black shadow-xl shadow-[#111C44]/20 hover:translate-y-[-2px] transition-all flex items-center gap-2 uppercase tracking-widest">
-                        <i data-lucide="calendar" class="w-5 h-5"></i>
+                    <button class="btn-ghost">Edit</button>
+                    <button class="btn-ghost">Mark Refilled</button>
+                    <button class="btn-navy flex items-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
                         Schedule Inspection
                     </button>
                 </div>
             </div>
 
-            <!-- MAIN DATA GRID -->
-            <div class="grid grid-cols-12 gap-8">
-                <!-- QR CODE AREA -->
-                <div class="col-span-4">
-                    <div class="card-premium p-8 h-full flex flex-col items-center justify-center">
-                        <div
-                            class="w-full aspect-square bg-white rounded-2xl flex items-center justify-center relative group">
-                            <img [src]="'https://api.qrserver.com/v1/create-qr-code/?size=350x350&data=' + extinguisherId"
-                                alt="QR Code"
-                                class="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500 p-2">
-                        </div>
+            <!-- GRID LAYOUT -->
+            <div class="grid grid-cols-12 gap-6">
+                <!-- QR CODE -->
+                <div class="col-span-3">
+                    <div class="qr-container h-full">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=FE-2024-X9" alt="QR"
+                            class="w-full grayscale opacity-80">
                     </div>
                 </div>
 
-                <!-- INFO & SPECS AREA -->
-                <div class="col-span-5 space-y-6">
-                    <!-- MAINTENANCE ALERT -->
-                    <div class="alert-maintenance p-6 flex gap-5 shadow-sm">
-                        <div class="w-12 h-12 rounded-xl bg-orange-100/50 flex items-center justify-center shrink-0">
-                            <i data-lucide="alert-triangle" class="w-6 h-6 text-[#FFB107]"></i>
-                        </div>
-                        <div class="space-y-1">
-                            <h4 class="text-[#92400E] font-black text-sm uppercase tracking-tight">Maintenance Action
+                <!-- SPECS & TIMELINE -->
+                <div class="col-span-6 space-y-6">
+                    <!-- ALERT -->
+                    <div class="alert-maintenance p-4 flex gap-4">
+                        <i data-lucide="alert-triangle" class="w-5 h-5 text-[#FFB107] shrink-0 mt-1"></i>
+                        <div>
+                            <h4 class="text-[11px] font-bold text-[#92400E] uppercase tracking-wide">Maintenance Action
                                 Required</h4>
-                            <p class="text-[#B45309] text-xs font-bold leading-relaxed">
-                                Refill is due in 12 days. Please schedule service to maintain compliance standards.
-                            </p>
+                            <p class="text-[11px] text-[#B45309] font-medium mt-1">Refill is due in 12 days. Please
+                                schedule service to maintain compliance standards.</p>
                         </div>
                     </div>
 
-                    <!-- TECH SPECS SECTION -->
-                    <div class="card-premium p-8 space-y-10 min-h-[300px]">
-                        <div class="flex items-center gap-3">
-                            <i data-lucide="info" class="w-5 h-5 text-navy-main"></i>
-                            <h3 class="text-[13px] font-black text-navy-main uppercase tracking-[0.25em]">Technical
+                    <!-- SPECS -->
+                    <div class="card-premium p-6">
+                        <div class="flex items-center gap-3 mb-8">
+                            <i data-lucide="info" class="w-4 h-4 text-navy-main"></i>
+                            <h3 class="text-[11px] font-bold text-navy-main uppercase tracking-widest">Technical
                                 Specifications</h3>
                         </div>
-
-                        <div class="grid grid-cols-2 gap-x-12 gap-y-12">
-                            <div class="space-y-4">
-                                <p
-                                    class="text-slate-muted text-[10px] font-black uppercase tracking-widest leading-none">
-                                    Type</p>
-                                <div class="flex items-center gap-4">
-                                    <div class="icon-box">
-                                        <i data-lucide="flame" class="w-4 h-4"></i>
-                                    </div>
-                                    <span class="text-[15px] font-black text-navy-secondary">CO₂ (Carbon Dioxide)</span>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <p
-                                    class="text-slate-muted text-[10px] font-black uppercase tracking-widest leading-none">
-                                    Capacity</p>
-                                <div class="flex items-center gap-4">
-                                    <div class="icon-box">
-                                        <i data-lucide="gauge" class="w-4 h-4"></i>
-                                    </div>
-                                    <span class="text-[15px] font-black text-navy-secondary">5.0 KG</span>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <p
-                                    class="text-slate-muted text-[10px] font-black uppercase tracking-widest leading-none">
-                                    Physical Condition</p>
-                                <div class="flex items-center gap-4">
-                                    <div class="icon-box icon-box-success">
-                                        <i data-lucide="clipboard-check" class="w-4 h-4"></i>
-                                    </div>
-                                    <span class="text-[15px] font-black text-[#059669]">Good (No Rust)</span>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <p
-                                    class="text-slate-muted text-[10px] font-black uppercase tracking-widest leading-none">
-                                    Specific Location</p>
-                                <div class="flex items-center gap-4">
-                                    <div class="icon-box">
-                                        <i data-lucide="map" class="w-4 h-4"></i>
-                                    </div>
-                                    <span class="text-[15px] font-black text-navy-secondary">Column B4</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SIDE STATS & LOGS AREA -->
-                <div class="col-span-3 space-y-6">
-                    <!-- ACTIVITY LOG CARD -->
-                    <div class="card-premium p-6 space-y-8">
-                        <div class="flex justify-between items-center">
-                            <h4 class="text-[13px] font-black text-navy-main uppercase tracking-widest">Activity Log
-                            </h4>
-                            <span class="text-[10px] font-black text-slate-400 bg-slate-50 px-2 py-1 rounded">12m</span>
-                        </div>
-                        <div class="flex items-end justify-between h-24 px-2 gap-3 mb-2">
-                            <div class="flex-1 bg-emerald-100/60 rounded-sm h-[45%]"></div>
-                            <div class="flex-1 bg-emerald-100/60 rounded-sm h-[80%]"></div>
-                            <div class="flex-1 bg-emerald-100/60 rounded-sm h-[60%]"></div>
-                            <div class="flex-1 bg-[#FFB107] rounded-sm h-[95%]"></div>
-                        </div>
-                        <p
-                            class="text-[10px] font-black text-slate-400 text-center uppercase tracking-[0.2em] opacity-80">
-                            Inspection frequency stable</p>
-                    </div>
-
-                    <!-- COMPLIANCE SCORE CARD -->
-                    <div
-                        class="bg-navy-main rounded-[24px] p-8 text-white relative overflow-hidden group shadow-2xl shadow-blue-900/20">
-                        <div class="flex justify-between items-start mb-6">
+                        <div class="grid grid-cols-2 gap-y-8">
                             <div class="space-y-2">
-                                <p class="text-[11px] font-bold text-white/50 uppercase tracking-[0.25em] leading-none">
-                                    Compliance</p>
-                                <h2 class="text-[44px] font-black leading-none">98%</h2>
+                                <p class="spec-label">Type</p>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="flame" class="w-4 h-4 text-slate-400"></i>
+                                    <span class="spec-value">CO₂ (Carbon Dioxide)</span>
+                                </div>
                             </div>
-                            <div class="p-3 bg-white/10 rounded-2xl group-hover:scale-110 transition-all duration-300">
-                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-400"></i>
+                            <div class="space-y-2">
+                                <p class="spec-label">Capacity</p>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="gauge" class="w-4 h-4 text-slate-400"></i>
+                                    <span class="spec-value">5.0 KG</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="spec-label">Physical Condition</p>
+                                <div class="flex items-center gap-3">
+                                    <div class="w-5 h-5 rounded-full bg-emerald-50 flex items-center justify-center">
+                                        <i data-lucide="check" class="w-3 h-3 text-emerald-500"></i>
+                                    </div>
+                                    <span class="spec-value text-emerald-600">Good (No Rust)</span>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="spec-label">Specific Location</p>
+                                <div class="flex items-center gap-3">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-slate-400"></i>
+                                    <span class="spec-value">Column B4</span>
+                                </div>
                             </div>
                         </div>
-                        <p class="text-[11px] font-bold text-white/40 mb-5 uppercase tracking-widest">Safety Score</p>
-                        <div class="w-full h-2 bg-white/10 rounded-full overflow-hidden">
+                    </div>
+
+                    <!-- TIMELINE -->
+                    <div class="card-premium p-6">
+                        <h3 class="text-[11px] font-bold text-navy-main uppercase tracking-widest mb-8">Lifecycle
+                            Timeline</h3>
+                        <div class="relative px-4">
+                            <div class="absolute top-1/2 left-4 right-4 h-[1px] bg-slate-100 -translate-y-[1.5rem]">
+                            </div>
+                            <div class="flex justify-between items-center relative z-10">
+                                <div class="flex flex-col items-center">
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-3">Last Refilled</p>
+                                    <div class="timeline-dot bg-slate-300 mb-3"></div>
+                                    <p class="text-[10px] font-bold text-navy-main">Jan 10, 2023</p>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase mb-3 text-nowrap">Last
+                                        Inspect</p>
+                                    <div class="timeline-dot bg-emerald-500 mb-3 text-nowrap text-center"></div>
+                                    <p class="text-[10px] font-bold text-emerald-600">Sep 15, 2023</p>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <p class="text-[9px] font-bold text-[#FFB107] uppercase mb-3">Refill Due</p>
+                                    <div class="timeline-dot bg-[#FFB107] mb-3"></div>
+                                    <p class="text-[10px] font-bold text-[#FFB107]">Nov 20, 2023</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT STATS -->
+                <div class="col-span-3 space-y-6">
+                    <!-- ACTIVITY -->
+                    <div class="card-premium p-5 flex flex-col justify-between">
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-[11px] font-bold text-navy-main uppercase tracking-widest">Activity Log</h3>
+                            <span class="text-[9px] bg-slate-50 px-2 py-0.5 rounded text-slate-400 font-bold">12m</span>
+                        </div>
+                        <div class="bar-chart-container mb-4">
+                            <div class="bar bg-emerald-50 h-[30%]"></div>
+                            <div class="bar bg-emerald-100 h-[60%]"></div>
+                            <div class="bar bg-emerald-50 h-[45%]"></div>
+                            <div class="bar bg-[#FEF3C7] h-[80%]"></div>
+                        </div>
+                        <p class="text-[9px] text-center text-slate-400 font-medium">Inspection frequency stable</p>
+                    </div>
+
+                    <!-- COMPLIANCE -->
+                    <div class="bg-navy-main rounded-[20px] p-6 text-white overflow-hidden relative">
+                        <div class="flex justify-between items-start mb-4">
+                            <div class="space-y-1">
+                                <p class="text-[9px] font-bold text-white/40 uppercase tracking-widest">Compliance</p>
+                                <h2 class="text-[28px] font-black leading-none">98%</h2>
+                            </div>
+                            <div class="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                            </div>
+                        </div>
+                        <p class="text-[9px] font-bold text-white/40 mb-3 uppercase tracking-widest">Safety Score</p>
+                        <div class="w-full h-1.5 bg-white/10 rounded-full">
                             <div
-                                class="w-[98%] h-full bg-emerald-500 rounded-full shadow-[0_0_12px_rgba(16,185,129,0.5)]">
+                                class="h-full bg-emerald-500 w-[98%] rounded-full shadow-[0_0_8px_rgba(16,185,129,0.4)]">
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <!-- LOWER SECTIONS AREA -->
-            <div class="grid grid-cols-12 gap-8">
-                <!-- LIFECYCLE TIMELINE BOX -->
-                <div class="col-span-9 card-premium p-10 flex flex-col justify-center min-h-[220px]">
-                    <h3 class="text-[13px] font-black text-navy-main uppercase tracking-[0.25em] mb-10">LIFECYCLE
-                        TIMELINE</h3>
-                    <div class="relative flex justify-between items-center px-16">
-                        <!-- Horizontal Line Connector -->
-                        <div class="absolute left-20 right-20 top-1/2 -translate-y-1/2 h-0.5 bg-slate-100"></div>
-
-                        <!-- Timeline Point 1 -->
-                        <div class="flex flex-col items-center relative z-10 gap-4">
-                            <p class="text-slate-muted text-[11px] font-black uppercase tracking-widest">Last Refilled
-                            </p>
-                            <div class="timeline-dot bg-slate-300"></div>
-                            <p class="text-[13px] font-black text-navy-main/80">Jan 10, 2023</p>
+                    <!-- EXPIRY -->
+                    <div class="card-premium p-6 flex justify-between items-center">
+                        <div class="space-y-1">
+                            <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Final Expiry</p>
+                            <h4 class="text-[14px] font-bold text-navy-main uppercase tracking-widest">Oct 2028</h4>
                         </div>
-                        <!-- Timeline Point 2 -->
-                        <div class="flex flex-col items-center relative z-10 gap-4">
-                            <p class="text-slate-muted text-[11px] font-black uppercase tracking-widest">Last Inspect
-                            </p>
-                            <div class="timeline-dot bg-emerald-500"></div>
-                            <p class="text-[13px] font-black text-[#059669]">Sep 15, 2023</p>
-                        </div>
-                        <!-- Timeline Point 3 -->
-                        <div class="flex flex-col items-center relative z-10 gap-4">
-                            <p class="text-[#FFB107] text-[11px] font-black uppercase tracking-widest italic">Refill Due
-                            </p>
-                            <div class="timeline-dot bg-[#FFB107] animate-pulse"></div>
-                            <p class="text-[14px] font-black text-[#FFB107]">Nov 20, 2023</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECONDARY STAT CARD -->
-                <div
-                    class="col-span-3 card-premium p-8 flex justify-between items-center bg-white shadow-xl shadow-[#7090B0]/5">
-                    <div class="space-y-2">
-                        <p class="text-slate-muted text-[11px] font-black uppercase tracking-widest leading-none">FINAL
-                            EXPIRY</p>
-                        <h4 class="text-[22px] font-black text-navy-main tracking-tight">Oct 2028</h4>
-                    </div>
-                    <div class="icon-box opacity-60">
-                        <i data-lucide="hourglass" class="w-6 h-6"></i>
+                        <i data-lucide="hourglass" class="w-5 h-5 text-slate-300"></i>
                     </div>
                 </div>
             </div>
 
-            <!-- TABLE SECTION AREA -->
+            <!-- TABLE -->
             <div class="card-premium overflow-hidden">
-                <div class="p-8 flex justify-between items-center bg-white border-b border-slate-50">
-                    <h3 class="text-[20px] font-black text-navy-main tracking-tight">Maintenance History</h3>
-                    <div class="flex gap-3">
-                        <button
-                            class="px-6 py-2.5 bg-slate-50 text-slate-500 text-[11px] font-black rounded-xl hover:bg-slate-100 transition-all uppercase tracking-widest shadow-sm">Export
-                            CSV</button>
-                        <button
-                            class="px-6 py-2.5 bg-slate-50 text-slate-500 text-[11px] font-black rounded-xl hover:bg-slate-100 transition-all uppercase tracking-widest shadow-sm">Filter</button>
+                <div class="p-6 flex justify-between items-center">
+                    <h3 class="text-[16px] font-bold text-navy-main">Maintenance History</h3>
+                    <div class="flex gap-2">
+                        <button class="btn-ghost !py-1.5 !px-4 text-[10px]">Export CSV</button>
+                        <button class="btn-ghost !py-1.5 !px-4 text-[10px]">Filter</button>
                     </div>
                 </div>
                 <div class="overflow-x-auto">
                     <table class="w-full text-left">
                         <thead>
-                            <tr class="bg-slate-50/50">
-                                <th class="table-header py-6 px-10">DATE</th>
-                                <th class="table-header py-6 px-10">ACTION</th>
-                                <th class="table-header py-6 px-10">INSPECTOR</th>
-                                <th class="table-header py-6 px-10">RESULT</th>
-                                <th class="table-header py-6 px-10">NOTES</th>
+                            <tr class="bg-slate-50/50 border-y border-slate-50">
+                                <th class="table-header px-6 py-4">Date</th>
+                                <th class="table-header px-6 py-4">Action</th>
+                                <th class="table-header px-6 py-4">Inspector</th>
+                                <th class="table-header px-6 py-4">Result</th>
+                                <th class="table-header px-6 py-4">Notes</th>
                             </tr>
                         </thead>
-                        <tbody class="divide-y divide-slate-100/80">
-                            <tr *ngFor="let record of maintenanceHistory"
-                                class="hover:bg-slate-50/50 transition-all group">
-                                <td class="py-7 px-10 text-[13px] font-black text-navy-main/80">{{record.date}}</td>
-                                <td class="py-7 px-10">
-                                    <span
-                                        class="px-4 py-2 rounded-full text-[10px] font-black uppercase flex items-center gap-2 border border-blue-50/20 shadow-sm"
-                                        [ngClass]="record.action === 'Inspection' ? 'status-inspection' : 'status-refill'">
-                                        <div class="w-1.5 h-1.5 rounded-full"
+                        <tbody class="divide-y divide-slate-50">
+                            <tr *ngFor="let record of maintenanceHistory">
+                                <td class="px-6 py-4 text-[11px] font-bold text-slate-600">{{record.date}}</td>
+                                <td class="px-6 py-4">
+                                    <span class="status-pill"
+                                        [ngClass]="record.action === 'Inspection' ? 'status-inspection-pill' : 'status-refill-pill'">
+                                        <div class="w-1 h-1 rounded-full"
                                             [ngClass]="record.action === 'Inspection' ? 'bg-blue-600' : 'bg-purple-600'">
                                         </div>
                                         {{record.action}}
                                     </span>
                                 </td>
-                                <td class="py-7 px-10 flex items-center gap-4">
-                                    <div
-                                        class="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-[11px] font-black text-slate-500 border border-slate-100 uppercase tracking-tighter">
-                                        {{record.inspectorInitials}}</div>
-                                    <span class="text-[14px] font-bold text-slate-600">{{record.inspector}}</span>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center text-[9px] font-bold text-slate-500 uppercase">
+                                            {{record.inspectorInitials}}</div>
+                                        <span class="text-[11px] font-bold text-slate-600">{{record.inspector}}</span>
+                                    </div>
                                 </td>
-                                <td class="py-7 px-10">
+                                <td class="px-6 py-4">
                                     <span
-                                        class="flex items-center gap-3 text-[13px] font-black text-emerald-500 uppercase tracking-widest">
-                                        <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                                        class="flex items-center gap-2 text-[11px] font-bold text-emerald-600 uppercase tracking-widest">
+                                        <i data-lucide="check-circle" class="w-4 h-4"></i>
                                         Passed
                                     </span>
                                 </td>
-                                <td
-                                    class="py-7 px-10 text-[14px] text-slate-400 italic font-medium opacity-80 leading-relaxed">
-                                    {{record.notes}}</td>
+                                <td class="px-6 py-4 text-[11px] text-slate-400 font-medium">{{record.notes}}</td>
                             </tr>
                         </tbody>
                     </table>
