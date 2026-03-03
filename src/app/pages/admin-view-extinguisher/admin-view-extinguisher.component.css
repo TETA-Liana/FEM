@@ -1,6 +1,6 @@
-/* Admin View Extinguisher Component Styles */
 :host {
     display: block;
+    height: 100vh;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -12,17 +12,117 @@
     scrollbar-width: none;
 }
 
-.icon-xs {
-    width: 0.75rem;
-    height: 0.75rem;
+/* Colors from Design */
+.bg-navy-main {
+    background-color: #0B1437;
 }
 
-.icon-sm {
-    width: 1.25rem;
-    height: 1.25rem;
+.text-navy-main {
+    color: #0B1437;
 }
 
-.icon-md {
-    width: 1.5rem;
-    height: 1.5rem;
+.text-navy-secondary {
+    color: #2B3674;
+}
+
+.text-slate-muted {
+    color: #A3AED0;
+}
+
+.bg-page {
+    background-color: #F8FAFC;
+}
+
+/* Components */
+.card-premium {
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #E9EDF7;
+    box-shadow: 0px 18px 40px 0px rgba(112, 144, 176, 0.12);
+}
+
+.icon-box {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F4F7FE;
+    color: #4318FF;
+}
+
+.icon-box-success {
+    background-color: #E6FAF5;
+    color: #059669;
+}
+
+.alert-maintenance {
+    background-color: #FFFDF5;
+    border-left: 4px solid #FFB107;
+    border-radius: 12px;
+}
+
+.pill-operational {
+    background-color: #EEFDF6;
+    color: #059669;
+}
+
+.btn-navy {
+    background-color: #111C44;
+    color: white;
+}
+
+.timeline-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 0 1px #E2E8F0;
+}
+
+.table-header {
+    font-size: 11px;
+    font-weight: 700;
+    color: #A3AED0;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.status-passed {
+    background-color: #E6FAF5;
+    color: #059669;
+}
+
+.status-inspection {
+    background-color: #EBF3FF;
+    color: #2D60FF;
+}
+
+.status-refill {
+    background-color: #F6F3FF;
+    color: #8C62FF;
+}
+
+/* Sidebar Specifics */
+.sidebar-link {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 700;
+    transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar-link.active {
+    color: white;
+    background: linear-gradient(90deg, #4318FF 0%, rgba(67, 24, 255, 0) 100%);
+    border-right: 4px solid #4318FF;
+}
+
+.profile-block {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
