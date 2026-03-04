@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
@@ -14,6 +14,12 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
 })
 export class AdminAssignedInspections implements AfterViewInit {
     inspectionsOpen = true;
+
+    constructor(private router: Router) { }
+
+    approveInspection() {
+        this.router.navigate(['/admin-inventory']);
+    }
 
     toggleInspections() {
         this.inspectionsOpen = !this.inspectionsOpen;
