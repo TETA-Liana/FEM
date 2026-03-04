@@ -172,7 +172,7 @@
                             <i data-lucide="plus-circle" class="w-4 h-4 text-white/80"></i>
                             Add Company
                         </button>
-                        <button
+                        <button routerLink="/super-admin-add-admin"
                             class="w-full bg-white border-2 border-slate-100 text-[#0B1437] rounded-xl py-3 flex items-center justify-center gap-2 text-[10px] font-black uppercase tracking-widest hover:border-blue-200 transition-all">
                             <span class="text-slate-400 font-bold">+1</span>
                             Add Admin
@@ -194,63 +194,77 @@
             <!-- CHARTS SECTION -->
             <div class="grid grid-cols-12 gap-6">
                 <!-- MONTHLY VOLUME CHART -->
-                <div class="col-span-7 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
-                    <h3 class="text-xs font-black text-[#0B1437] uppercase tracking-wider mb-10">Monthly Inspection
+                <div
+                    class="col-span-7 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm relative overflow-hidden">
+                    <h3 class="text-xs font-black text-[#0B1437] uppercase tracking-wider mb-12">Monthly Inspection
                         Volume</h3>
-                    <div class="h-64 flex items-end justify-between gap-4 px-4 relative">
-                        <!-- Y-Axis Grid Lines (Abstract) -->
-                        <div class="absolute inset-x-0 bottom-0 h-full flex flex-col justify-between opacity-5">
+                    <div class="h-56 flex items-end justify-between gap-4 px-6 relative">
+                        <!-- Y-Axis Grid Lines -->
+                        <div
+                            class="absolute inset-x-0 top-0 bottom-0 flex flex-col justify-between opacity-5 pointer-events-none">
+                            <div class="border-t border-slate-900 w-full mt-10"></div>
                             <div class="border-t border-slate-900 w-full"></div>
                             <div class="border-t border-slate-900 w-full"></div>
-                            <div class="border-t border-slate-900 w-full"></div>
-                            <div class="border-t border-slate-900 w-full"></div>
+                            <div class="border-t border-slate-900 w-full mb-10"></div>
                         </div>
 
                         <div *ngFor="let data of chartData"
-                            class="flex-1 flex flex-col items-center group relative z-10">
-                            <div class="w-full max-w-[40px] bg-[#0B1437] rounded-t-lg transition-all group-hover:bg-blue-600 relative"
-                                [style.height.%]="data.value">
-                                <span *ngIf="data.month === 'Dec'"
-                                    class="absolute -top-6 left-1/2 -translate-x-1/2 text-[10px] font-black text-slate-400">Dec</span>
-                            </div>
+                            class="flex-1 flex flex-col items-center group relative z-10 h-full justify-end">
                             <span
-                                class="text-[9px] font-bold text-slate-300 mt-4 uppercase tracking-widest">{{data.month}}</span>
+                                class="text-[9px] font-bold text-slate-400 mb-3 uppercase tracking-widest opacity-60 group-hover:opacity-100 transition-opacity">{{data.month}}</span>
+                            <div class="w-full max-w-[40px] bg-[#0B1437] rounded-lg transition-all group-hover:bg-blue-600 relative cursor-pointer"
+                                [style.height.%]="data.value">
+                                <div
+                                    class="bar-tooltip absolute -top-8 left-1/2 -translate-x-1/2 bg-[#0B1437] text-white text-[8px] px-2 py-1 rounded hidden group-hover:block whitespace-nowrap z-20 shadow-lg">
+                                    {{data.value}}% Complete
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- DISTRIBUTION DONUT -->
-                <div class="col-span-5 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm">
+                <div class="col-span-5 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm overflow-hidden">
                     <h3 class="text-xs font-black text-[#0B1437] uppercase tracking-wider mb-10">Inspection Outcome
                         Distribution</h3>
                     <div class="flex items-center justify-between gap-8 h-56">
-                        <div class="relative w-44 h-44 shrink-0">
-                            <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                                <circle class="text-emerald-500" stroke-width="12" stroke="currentColor"
-                                    fill="transparent" r="40" cx="50" cy="50" stroke-dasharray="251.2"
-                                    stroke-dashoffset="87.9"></circle>
-                                <circle class="text-[#0B1437]" stroke-width="12" stroke="currentColor"
-                                    fill="transparent" r="40" cx="50" cy="50" stroke-dasharray="251.2"
-                                    stroke-dashoffset="200.9"></circle>
-                                <circle class="text-amber-400" stroke-width="12" stroke="currentColor"
-                                    fill="transparent" r="40" cx="50" cy="50" stroke-dasharray="251.2"
-                                    stroke-dashoffset="226"></circle>
-                                <circle class="text-red-500" stroke-width="12" stroke="currentColor" fill="transparent"
-                                    r="40" cx="50" cy="50" stroke-dasharray="251.2" stroke-dashoffset="238.6"></circle>
+                        <div class="relative w-44 h-44 shrink-0 -mt-2">
+                            <svg class="w-full h-full -rotate-90 drop-shadow-sm" viewBox="0 0 100 100">
+                                <!-- Background circle -->
+                                <circle class="text-slate-50" stroke-width="10" stroke="currentColor" fill="transparent"
+                                    r="38" cx="50" cy="50"></circle>
+
+                                <!-- Segments -->
+                                <circle class="text-emerald-500" stroke-width="10" stroke="currentColor"
+                                    fill="transparent" r="38" cx="50" cy="50" stroke-dasharray="155.2 238.7"
+                                    stroke-dashoffset="0" class="transition-all duration-1000"></circle>
+
+                                <circle class="text-[#0B1437]" stroke-width="10" stroke="currentColor"
+                                    fill="transparent" r="38" cx="50" cy="50" stroke-dasharray="47.7 238.7"
+                                    stroke-dashoffset="-155.2" class="transition-all duration-1000"></circle>
+
+                                <circle class="text-amber-400" stroke-width="10" stroke="currentColor"
+                                    fill="transparent" r="38" cx="50" cy="50" stroke-dasharray="23.9 238.7"
+                                    stroke-dashoffset="-202.9" class="transition-all duration-1000"></circle>
+
+                                <circle class="text-red-500" stroke-width="10" stroke="currentColor" fill="transparent"
+                                    r="38" cx="50" cy="50" stroke-dasharray="11.9 238.7" stroke-dashoffset="-226.8"
+                                    class="transition-all duration-1000"></circle>
                             </svg>
                             <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <span class="text-xl font-black text-[#0B1437]">892</span>
+                                <span class="text-2xl font-black text-[#0B1437] tracking-tighter">892</span>
                                 <span
-                                    class="text-[8px] font-black text-slate-400 uppercase tracking-widest leading-none">Total</span>
+                                    class="text-[9px] font-black text-slate-400 uppercase tracking-widest leading-none mt-1">Total</span>
                             </div>
                         </div>
 
-                        <div class="flex-1 space-y-4">
-                            <div *ngFor="let item of distribution" class="flex items-center justify-between group">
+                        <div class="flex-1 space-y-4 pr-2">
+                            <div *ngFor="let item of distribution"
+                                class="flex items-center justify-between group cursor-pointer">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-2.5 h-2.5 rounded-full" [ngClass]="item.color"></div>
+                                    <div class="w-2.5 h-2.5 rounded-full shadow-sm" [ngClass]="item.color"></div>
                                     <span
-                                        class="text-[10px] font-bold text-slate-500 group-hover:text-[#0B1437] transition-colors">{{item.label}}</span>
+                                        class="text-[10px] font-bold text-slate-500 group-hover:text-[#0B1437] transition-colors tracking-tight">{{item.label}}</span>
                                 </div>
                                 <span class="text-[10px] font-black text-[#0B1437]">{{item.percentage}}%</span>
                             </div>

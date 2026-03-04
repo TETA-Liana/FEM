@@ -48,12 +48,12 @@ export class SuperAdminDashboard implements AfterViewInit {
     ];
 
     chartData = [
-        { month: 'Aug', value: 45 },
-        { month: 'Sep', value: 65 },
-        { month: 'Oct', value: 38 },
-        { month: 'Nov', value: 58 },
-        { month: 'Dec', value: 85 },
-        { month: 'Jan', value: 62 }
+        { month: 'Aug', value: 42 },
+        { month: 'Sep', value: 58 },
+        { month: 'Oct', value: 48 },
+        { month: 'Nov', value: 72 },
+        { month: 'Dec', value: 88 },
+        { month: 'Jan', value: 65 }
     ];
 
     distribution = [

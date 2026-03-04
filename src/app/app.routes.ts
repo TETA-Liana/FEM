@@ -31,6 +31,7 @@ import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 import { AdminRefills } from './pages/admin-refills/admin-refills';
 import { AdminSettings } from './pages/admin-settings/admin-settings';
 import { SuperAdminDashboard } from './pages/super-admin-dashboard/super-admin-dashboard';
+import { SuperAdminAddAdmin } from './pages/super-admin-add-admin/super-admin-add-admin';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -38,6 +39,7 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'super-admin-dashboard', component: SuperAdminDashboard },
+  { path: 'super-admin-add-admin', component: SuperAdminAddAdmin },
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'admin-inventory', component: AdminInventoryComponent },
   { path: 'admin-inspectors', component: AdminInspectors },
