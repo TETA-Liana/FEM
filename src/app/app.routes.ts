@@ -26,6 +26,7 @@ import { AdminInspectionLabel } from './pages/admin-inspection-label/admin-inspe
 import { AdminAssignedInspections } from './pages/admin-assigned-inspections/admin-assigned-inspections';
 import { AdminInventoryComponent } from './pages/admin-inventory/admin-inventory';
 import { AdminInspectors } from './pages/admin-inspectors/admin-inspectors';
+import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -35,6 +36,7 @@ export const routes: Routes = [
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'admin-inventory', component: AdminInventoryComponent },
   { path: 'admin-inspectors', component: AdminInspectors },
+  { path: 'admin-compliance', component: AdminCompliance },
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },
