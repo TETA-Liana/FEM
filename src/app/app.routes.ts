@@ -28,6 +28,8 @@ import { AdminInventoryComponent } from './pages/admin-inventory/admin-inventory
 import { AdminInspectors } from './pages/admin-inspectors/admin-inspectors';
 import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 
+import { AdminRefills } from './pages/admin-refills/admin-refills';
+
 export const routes: Routes = [
   { path: '', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
@@ -37,6 +39,7 @@ export const routes: Routes = [
   { path: 'admin-inventory', component: AdminInventoryComponent },
   { path: 'admin-inspectors', component: AdminInspectors },
   { path: 'admin-compliance', component: AdminCompliance },
+  { path: 'admin-refills', component: AdminRefills },
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },
