@@ -22,7 +22,7 @@ export class AppComponent {
   /** Show sidebar and topbar only for dashboard (and other app routes), not for sign-in/sign-up. */
   showLayout(): boolean {
     const path = this.router.url.split('?')[0];
-    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label', '/admin-assigned-inspections', '/admin-inventory', '/admin-inspectors', '/admin-compliance', '/admin-refills'];
+    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label', '/admin-assigned-inspections', '/admin-inventory', '/admin-inspectors', '/admin-compliance', '/admin-refills', '/admin-settings'];
 
     // Check for exact matches or paths starting with certain prefixes
     if (excludedRoutes.includes(path)) return false;

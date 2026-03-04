@@ -29,6 +29,7 @@ import { AdminInspectors } from './pages/admin-inspectors/admin-inspectors';
 import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 
 import { AdminRefills } from './pages/admin-refills/admin-refills';
+import { AdminSettings } from './pages/admin-settings/admin-settings';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -40,6 +41,7 @@ export const routes: Routes = [
   { path: 'admin-inspectors', component: AdminInspectors },
   { path: 'admin-compliance', component: AdminCompliance },
   { path: 'admin-refills', component: AdminRefills },
+  { path: 'admin-settings', component: AdminSettings },
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },
