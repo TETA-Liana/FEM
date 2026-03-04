@@ -13,6 +13,12 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
   styleUrl: './admin-add-extinguisher.css',
 })
 export class AdminAddExtinguisher implements AfterViewInit {
+  inspectionsOpen = true;
+
+  toggleInspections() {
+    this.inspectionsOpen = !this.inspectionsOpen;
+    this.initIcons();
+  }
   purchaseType: string = 'Fixed Price';
 
   formData = {

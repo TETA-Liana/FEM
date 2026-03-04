@@ -22,11 +22,11 @@ export class AppComponent {
   /** Show sidebar and topbar only for dashboard (and other app routes), not for sign-in/sign-up. */
   showLayout(): boolean {
     const path = this.router.url.split('?')[0];
-    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label'];
+    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label', '/admin-assigned-inspections'];
 
     // Check for exact matches or paths starting with certain prefixes
     if (excludedRoutes.includes(path)) return false;
-    if (path.startsWith('/admin-view-extinguisher/') || path.startsWith('/admin-inspection-label/')) return false;
+    if (path.startsWith('/admin-view-extinguisher/') || path.startsWith('/admin-inspection-label/') || path.startsWith('/admin-assigned-inspections/')) return false;
 
     return true;
   }

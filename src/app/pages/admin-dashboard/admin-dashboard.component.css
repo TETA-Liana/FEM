@@ -93,3 +93,8 @@ select {
 ::-webkit-scrollbar-thumb:hover {
     background: #94a3b8;
 }
+
+.sidebar-link-active {
+    background-color: rgba(255, 255, 255, 0.15) !important;
+    border-radius: 12px;
+}

@@ -23,12 +23,14 @@ import { AdminAddExtinguisher } from './pages/admin-add-extinguisher/admin-add-e
 
 import { AdminViewExtinguisherComponent } from './pages/admin-view-extinguisher/admin-view-extinguisher.component';
 import { AdminInspectionLabel } from './pages/admin-inspection-label/admin-inspection-label';
+import { AdminAssignedInspections } from './pages/admin-assigned-inspections/admin-assigned-inspections';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
+  { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },

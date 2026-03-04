@@ -13,6 +13,12 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
   styleUrl: './admin-locations-dashboard.css',
 })
 export class AdminLocationsDashboard implements AfterViewInit {
+  inspectionsOpen = true;
+
+  toggleInspections() {
+    this.inspectionsOpen = !this.inspectionsOpen;
+    this.initIcons();
+  }
   ngAfterViewInit() {
     this.initIcons();
   }
