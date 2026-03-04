@@ -30,12 +30,14 @@ import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 
 import { AdminRefills } from './pages/admin-refills/admin-refills';
 import { AdminSettings } from './pages/admin-settings/admin-settings';
+import { SuperAdminDashboard } from './pages/super-admin-dashboard/super-admin-dashboard';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'admin-dashboard', component: AdminDashboardComponent },
+  { path: 'super-admin-dashboard', component: SuperAdminDashboard },
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'admin-inventory', component: AdminInventoryComponent },
   { path: 'admin-inspectors', component: AdminInspectors },
