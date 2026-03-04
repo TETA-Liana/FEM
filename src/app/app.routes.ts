@@ -32,6 +32,8 @@ import { AdminRefills } from './pages/admin-refills/admin-refills';
 import { AdminSettings } from './pages/admin-settings/admin-settings';
 import { SuperAdminDashboard } from './pages/super-admin-dashboard/super-admin-dashboard';
 import { SuperAdminAddAdmin } from './pages/super-admin-add-admin/super-admin-add-admin';
+import { SuperAdminAdmins } from './pages/super-admin-admins/super-admin-admins';
+import { SuperAdminAdminDetails } from './pages/super-admin-admin-details/super-admin-admin-details';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -40,6 +42,8 @@ export const routes: Routes = [
   { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'super-admin-dashboard', component: SuperAdminDashboard },
   { path: 'super-admin-add-admin', component: SuperAdminAddAdmin },
+  { path: 'super-admin-admins', component: SuperAdminAdmins },
+  { path: 'super-admin-admin-details/:id', component: SuperAdminAdminDetails },
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'admin-inventory', component: AdminInventoryComponent },
   { path: 'admin-inspectors', component: AdminInspectors },
