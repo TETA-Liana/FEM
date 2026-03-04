@@ -25,6 +25,7 @@ import { AdminViewExtinguisherComponent } from './pages/admin-view-extinguisher/
 import { AdminInspectionLabel } from './pages/admin-inspection-label/admin-inspection-label';
 import { AdminAssignedInspections } from './pages/admin-assigned-inspections/admin-assigned-inspections';
 import { AdminInventoryComponent } from './pages/admin-inventory/admin-inventory';
+import { AdminInspectors } from './pages/admin-inspectors/admin-inspectors';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -33,6 +34,7 @@ export const routes: Routes = [
   { path: 'admin-dashboard', component: AdminDashboardComponent },
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
   { path: 'admin-inventory', component: AdminInventoryComponent },
+  { path: 'admin-inspectors', component: AdminInspectors },
   { path: 'clients', component: ClientsDashboard },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },

@@ -59,8 +59,9 @@
                             class="block py-2.5 text-[11px] font-bold text-slate-400 hover:text-white transition-colors cursor-pointer">
                             Inspection Label
                         </a>
-                        <a (click)="$event.preventDefault()"
-                            class="block py-2.5 text-[11px] font-bold text-slate-400/50 hover:text-white transition-colors cursor-default">
+                        <a routerLink="/admin-inspectors"
+                            routerLinkActive="!text-white font-black bg-white/5 rounded-xl px-4"
+                            class="block py-2.5 text-[11px] font-bold text-slate-400 hover:text-white transition-colors cursor-pointer">
                             Inspectors
                         </a>
                     </div>
