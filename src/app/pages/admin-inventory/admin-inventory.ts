@@ -18,6 +18,10 @@ export class AdminInventoryComponent implements AfterViewInit {
 
     constructor(private router: Router) { }
 
+    generateLabel() {
+        this.router.navigate(['/admin-inspection-label', 'LE-2023-894']);
+    }
+
     toggleInspections() {
         this.inspectionsOpen = !this.inspectionsOpen;
         this.initIcons();

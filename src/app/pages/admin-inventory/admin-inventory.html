@@ -231,7 +231,7 @@
                     Filter
                 </button>
                 <div class="flex-1"></div>
-                <button
+                <button (click)="generateLabel()"
                     class="px-6 py-2 bg-[#0B1437] text-white rounded-lg text-[10px] font-black tracking-tight shadow-lg shadow-blue-900/20 hover:bg-blue-900 transition-all">
                     Generate Label
                 </button>
@@ -301,7 +301,7 @@
                                     </button>
                                 </ng-container>
                                 <ng-container *ngIf="item.status === 'No label'">
-                                    <button
+                                    <button (click)="generateLabel()"
                                         class="px-4 py-1.5 bg-[#0B1437] text-white rounded-lg text-[9px] font-black hover:bg-blue-900 transition-all shadow-sm">
                                         Generate
                                     </button>
