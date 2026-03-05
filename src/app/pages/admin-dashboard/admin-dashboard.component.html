@@ -15,9 +15,9 @@
             <div>
                 <a routerLink="/admin-dashboard" routerLinkActive="bg-white/10 text-white"
                     [routerLinkActiveOptions]="{exact: true}"
-                    class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
+                    class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
                     <i data-lucide="layout-grid" class="icon-xs opacity-90 group-hover:opacity-100 shrink-0"></i>
-                    <span class="text-[10px] tracking-wide font-semibold">Dashboard</span>
+                    <span class="text-[12px] tracking-wide font-semibold">Dashboard</span>
                 </a>
             </div>
 
@@ -25,14 +25,14 @@
                 <p class="text-[9px] font-black text-slate-100 uppercase tracking-[0.15em] px-3 mb-4">Operations</p>
                 <div class="space-y-1">
                     <a routerLink="/clients" routerLinkActive="bg-white/10 text-white"
-                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
                         <i data-lucide="users" class="icon-xs opacity-90 group-hover:opacity-100 shrink-0"></i>
-                        <span class="text-[10px] tracking-wide font-semibold">Clients</span>
+                        <span class="text-[12px] tracking-wide font-semibold">Clients</span>
                     </a>
                     <a routerLink="/admin-locations" routerLinkActive="bg-white/10 text-white"
-                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
                         <i data-lucide="map-pin" class="icon-xs opacity-90 group-hover:opacity-100 shrink-0"></i>
-                        <span class="text-[10px] tracking-wide font-semibold">Locations</span>
+                        <span class="text-[12px] tracking-wide font-semibold">Locations</span>
                     </a>
                     <a routerLink="/admin-location-details"
                         class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white justify-between group cursor-pointer">
@@ -44,15 +44,15 @@
                     </a>
                     <div class="space-y-1">
                         <a (click)="toggleInspections()"
-                            class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-white hover:bg-white/20 transition-all justify-between group cursor-pointer"
+                            class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-white hover:bg-white/20 transition-all justify-between group cursor-pointer"
                             [class.bg-white/15]="inspectionsOpen">
-                            <div class="flex items-center gap-2.5">
+                            <div class="flex items-center gap-3">
                                 <i data-lucide="clipboard-check"
                                     class="icon-xs opacity-90 group-hover:opacity-100 shrink-0"></i>
-                                <span class="text-[10px] tracking-wide font-semibold">Inspections</span>
+                                <span class="text-[12px] tracking-wide font-semibold">Inspections</span>
                             </div>
                             <i [attr.data-lucide]="inspectionsOpen ? 'chevron-up' : 'chevron-down'"
-                                class="w-2.5 h-2.5 opacity-60 group-hover:opacity-100"></i>
+                                class="w-3 h-3 opacity-60 group-hover:opacity-100"></i>
                         </a>
 
                         <div *ngIf="inspectionsOpen" class="pl-9 space-y-1 mt-1">
@@ -79,28 +79,28 @@
                     Management</p>
                 <div class="space-y-1">
                     <a routerLink="/admin-compliance"
-                        class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white justify-between group cursor-pointer">
-                        <div class="flex items-center gap-2.5">
+                        class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white justify-between group cursor-pointer">
+                        <div class="flex items-center gap-3">
                             <i data-lucide="shield-check"
                                 class="icon-xs opacity-90 group-hover:opacity-100 shrink-0"></i>
-                            <span class="text-[10px] tracking-wide font-semibold">Compliance</span>
+                            <span class="text-[12px] tracking-wide font-semibold">Compliance</span>
                         </div>
-                        <i data-lucide="chevron-right" class="w-2.5 h-2.5 opacity-60 group-hover:opacity-100"></i>
+                        <i data-lucide="chevron-right" class="w-3 h-3 opacity-60 group-hover:opacity-100"></i>
                     </a>
                     <a routerLink="/admin-refills" routerLinkActive="bg-white/10 text-white"
-                        class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
-                        <div class="flex items-center gap-2.5">
+                        class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
+                        <div class="flex items-center gap-3">
                             <i data-lucide="repeat" class="w-3 h-3 opacity-90 group-hover:opacity-100 shrink-0"></i>
-                            <span class="text-[10px] tracking-wide font-semibold">Refills</span>
+                            <span class="text-[12px] tracking-wide font-semibold">Refills</span>
                         </div>
                         <span
-                            class="w-4 h-4 bg-amber-500 text-white rounded-full text-[8px] flex items-center justify-center font-black">5</span>
+                            class="w-5 h-5 bg-amber-500 text-white rounded-full text-[10px] flex items-center justify-center font-black">5</span>
                     </a>
                     <a routerLink="/admin-settings" routerLinkActive="bg-white/10 text-white"
-                        class="flex items-center justify-between px-3 py-2 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group">
-                        <div class="flex items-center gap-2.5">
-                            <i data-lucide="settings" class="w-3 h-3 opacity-90 group-hover:opacity-100"></i>
-                            <span class="text-[10px] tracking-wide font-semibold">Settings</span>
+                        class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="settings" class="icon-xs opacity-90 group-hover:opacity-100"></i>
+                            <span class="text-[12px] tracking-wide font-semibold">Settings</span>
                         </div>
                     </a>
                 </div>
@@ -110,18 +110,19 @@
         <!-- PROFILE BLOCK -->
         <div class="px-3 pb-6 mt-auto">
             <div
-                class="bg-white/5 rounded-xl p-3 flex items-center gap-2.5 border border-white/5 transition-all hover:bg-white/10 cursor-pointer group">
+                class="bg-white/5 rounded-xl p-4 flex items-center gap-3 border border-white/5 transition-all hover:bg-white/10 cursor-pointer group">
                 <div
-                    class="w-8 h-8 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-sm transition-transform group-hover:scale-105">
+                    class="w-10 h-10 rounded-full bg-amber-400 flex-shrink-0 flex items-center justify-center overflow-hidden border-2 border-white/10 shadow-sm transition-transform group-hover:scale-105">
                     <img src="https://ui-avatars.com/api/?name=Usanase&background=FFC107&color=fff" alt="Profile"
                         class="w-full h-full object-cover">
                 </div>
                 <div class="min-w-0">
-                    <p class="text-[8px] font-black text-slate-300 uppercase tracking-widest">ADMIN</p>
-                    <p class="text-[10px] font-black text-white truncate">Usanase</p>
+                    <p class="text-[10px] font-black text-slate-300 uppercase tracking-widest leading-none mb-1">ADMIN
+                    </p>
+                    <p class="text-[12px] font-black text-white truncate">Usanase</p>
                 </div>
                 <i data-lucide="log-out"
-                    class="icon-xs text-slate-400 ml-auto opacity-40 group-hover:opacity-100 group-hover:text-red-400 transition-all"></i>
+                    class="icon-sm text-slate-400 ml-auto opacity-40 group-hover:opacity-100 group-hover:text-red-400 transition-all"></i>
             </div>
         </div>
     </aside>
@@ -135,7 +136,7 @@
                 <i data-lucide="search"
                     class="icon-xs absolute left-3 top-1/2 -translate-y-1/2 text-blue-500/50 shrink-0"></i>
                 <input type="text" placeholder="Search for something..."
-                    class="w-full pl-9 pr-4 py-2 bg-slate-50 border-none rounded-xl text-[10px] focus:outline-none focus:ring-1 focus:ring-blue-500/10 transition-all placeholder:text-slate-400">
+                    class="w-full pl-10 pr-4 py-2.5 bg-slate-50 border-none rounded-xl text-[12px] focus:outline-none focus:ring-1 focus:ring-blue-500/10 transition-all placeholder:text-slate-400">
             </div>
             <div class="flex items-center gap-3">
                 <div class="relative">
@@ -154,7 +155,7 @@
                             class="absolute top-2 right-2 w-1.5 h-1.5 bg-red-500 rounded-full border-2 border-white"></span>
                     </button>
                 </div>
-                <button
+                <button routerLink="/admin-settings"
                     class="w-8 h-8 rounded-xl bg-white border border-slate-100 flex items-center justify-center text-blue-500/80 hover:bg-blue-50 hover:text-blue-600 transition-all shadow-sm">
                     <i data-lucide="settings" class="icon-xs shrink-0"></i>
                 </button>
@@ -165,35 +166,36 @@
             <!-- SAFETY ALERT BANNER -->
             <div class="space-y-3 mb-5">
                 <div routerLink="/admin-compliance"
-                    class="bg-[#FFF5F5] border border-red-100 rounded-xl p-4 flex items-center justify-between shadow-sm cursor-pointer hover:bg-red-50 transition-all group">
-                    <div class="flex items-center gap-4">
-                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                            <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                    class="bg-[#FFF5F5] border border-red-100 rounded-xl p-5 flex items-center justify-between shadow-sm cursor-pointer hover:bg-red-50 transition-all group">
+                    <div class="flex items-center gap-5">
+                        <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                            <i data-lucide="alert-triangle" class="w-6 h-6"></i>
                         </div>
                         <div>
-                            <h4 class="text-[13px] font-black text-red-700 tracking-tight">URGENT: 8 High-Priority
+                            <h4 class="text-[15px] font-black text-red-700 tracking-tight">URGENT: 8 High-Priority
                                 Safety
                                 Alerts Require Immediate Action</h4>
-                            <p class="text-[10px] font-bold text-red-600/70 mt-0.5">3 extinguishers expired, 5 critical
+                            <p class="text-[12px] font-bold text-red-600/70 mt-1">3 extinguishers expired, 5 critical
                                 inspections overdue</p>
                         </div>
                     </div>
                     <button
-                        class="px-4 py-1.5 bg-red-600 text-white rounded-lg text-[10px] font-black hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 uppercase tracking-widest">View
+                        class="px-5 py-2 bg-red-600 text-white rounded-lg text-[11px] font-black hover:bg-red-700 transition-all shadow-lg shadow-red-600/20 uppercase tracking-widest">View
                         All</button>
                 </div>
 
                 <div routerLink="/admin-refills"
-                    class="bg-[#FFF9F2] border border-amber-100 rounded-xl p-3 flex items-center justify-between shadow-sm cursor-pointer hover:bg-amber-50 transition-all group">
-                    <div class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
-                            <i data-lucide="droplet" class="w-4 h-4"></i>
+                    class="bg-[#FFF9F2] border border-amber-100 rounded-xl p-4 flex items-center justify-between shadow-sm cursor-pointer hover:bg-amber-50 transition-all group">
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600">
+                            <i data-lucide="droplet" class="w-5 h-5"></i>
                         </div>
-                        <p class="text-[11px] font-black text-amber-700 tracking-tight">5 Refills Required - Pending
+                        <p class="text-[13px] font-black text-amber-700 tracking-tight">5 Refills Required - Pending
                             Technician Assignment</p>
                     </div>
                     <button
-                        class="text-[10px] font-black text-amber-700 underline underline-offset-4 hover:text-amber-800 transition-colors">Assign
+                        class="text-[11px] font-black text-amber-700 underline underline-offset-4 hover:text-amber-800 transition-colors">Assign
                         Now</button>
                 </div>
             </div>
@@ -203,24 +205,25 @@
                 class="bg-[#0B1437] rounded-xl flex overflow-hidden border border-white/5 shadow-2xl shadow-blue-900/20 dashboard-card stat-card-glow transition-all">
                 <!-- Earnings -->
                 <div
-                    class="flex-1 p-5 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
-                    <div class="flex justify-between items-start mb-4">
+                    class="flex-1 p-6 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
+                    <div class="flex justify-between items-start mb-5">
                         <h3
-                            class="text-[10px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
+                            class="text-[11px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
                             Total Earnings</h3>
-                        <span class="text-[10px] font-black text-blue-400">Detail</span>
+                        <span class="text-[11px] font-black text-blue-400">Detail</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-xl font-black text-white mb-2">5,000,000 <span
-                                    class="text-[10px] text-slate-500 font-bold uppercase ml-1">rwf</span></h2>
+                            <h2 class="text-2xl font-black text-white mb-2.5">5,000,000 <span
+                                    class="text-[11px] text-slate-500 font-bold uppercase ml-1">rwf</span></h2>
                             <div
-                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                class="flex items-center gap-1.5 px-2 py-0.5 bg-white rounded-full text-[10px] font-black text-slate-900 w-max shadow-sm">
                                 <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
                             <i data-lucide="dollar-sign" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
@@ -228,23 +231,24 @@
 
                 <!-- Orders -->
                 <div
-                    class="flex-1 p-5 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
-                    <div class="flex justify-between items-start mb-4">
+                    class="flex-1 p-6 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
+                    <div class="flex justify-between items-start mb-5">
                         <h3
-                            class="text-[10px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
+                            class="text-[11px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
                             Total Orders</h3>
-                        <span class="text-[10px] font-black text-blue-400">Detail</span>
+                        <span class="text-[11px] font-black text-blue-400">Detail</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-xl font-black text-white mb-2">40</h2>
+                            <h2 class="text-2xl font-black text-white mb-2.5">40</h2>
                             <div
-                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                class="flex items-center gap-1.5 px-2 py-0.5 bg-white rounded-full text-[10px] font-black text-slate-900 w-max shadow-sm">
                                 <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
                             <i data-lucide="shopping-cart" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
@@ -252,23 +256,24 @@
 
                 <!-- Customers -->
                 <div
-                    class="flex-1 p-5 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
-                    <div class="flex justify-between items-start mb-4">
+                    class="flex-1 p-6 border-r border-white/10 relative group cursor-pointer hover:bg-white/[0.02] transition-all">
+                    <div class="flex justify-between items-start mb-5">
                         <h3
-                            class="text-[10px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
+                            class="text-[11px] font-black text-slate-300 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
                             Total Customers</h3>
-                        <span class="text-[10px] font-black text-blue-400">Detail</span>
+                        <span class="text-[11px] font-black text-blue-400">Detail</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-xl font-black text-white mb-2">1,000</h2>
+                            <h2 class="text-2xl font-black text-white mb-2.5">1,000</h2>
                             <div
-                                class="flex items-center gap-1 px-1.5 py-0.5 bg-white rounded-full text-[8px] font-black text-slate-900 w-max shadow-sm">
+                                class="flex items-center gap-1.5 px-2 py-0.5 bg-white rounded-full text-[10px] font-black text-slate-900 w-max shadow-sm">
                                 <i data-lucide="arrow-up" class="icon-xs text-green-500 shrink-0"></i>
                                 <span>+1.23%</span>
                             </div>
                         </div>
-                        <div class="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
+                        <div
+                            class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shadow-inner group">
                             <i data-lucide="users" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
@@ -276,24 +281,24 @@
 
                 <!-- Compliance -->
                 <div routerLink="/admin-compliance"
-                    class="flex-1 p-5 relative group cursor-pointer hover:bg-red-500/10 transition-all bg-red-500/5">
-                    <div class="flex justify-between items-start mb-4">
+                    class="flex-1 p-6 relative group cursor-pointer hover:bg-red-500/10 transition-all bg-red-500/5">
+                    <div class="flex justify-between items-start mb-5">
                         <h3
-                            class="text-[10px] font-black text-red-400 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
+                            class="text-[11px] font-black text-red-400 uppercase tracking-widest opacity-80 group-hover:opacity-100 transition-opacity">
                             Safety Alerts</h3>
-                        <span class="text-[10px] font-black text-red-500">Action</span>
+                        <span class="text-[11px] font-black text-red-500">Action</span>
                     </div>
                     <div class="flex items-center justify-between">
                         <div>
-                            <h2 class="text-xl font-black text-white mb-2">18</h2>
+                            <h2 class="text-2xl font-black text-white mb-2.5">18</h2>
                             <div
-                                class="flex items-center gap-1 px-1.5 py-0.5 bg-red-500 rounded-full text-[8px] font-black text-white w-max shadow-sm">
+                                class="flex items-center gap-1.5 px-2 py-0.5 bg-red-500 rounded-full text-[10px] font-black text-white w-max shadow-sm">
                                 <i data-lucide="alert-octagon" class="icon-xs shrink-0"></i>
                                 <span>Urgent</span>
                             </div>
                         </div>
                         <div
-                            class="w-8 h-8 rounded-xl bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/20">
+                            class="w-10 h-10 rounded-xl bg-red-500 flex items-center justify-center shadow-lg shadow-red-500/20">
                             <i data-lucide="shield-alert" class="icon-sm text-white shrink-0"></i>
                         </div>
                     </div>
@@ -306,19 +311,19 @@
                 <div
                     class="col-span-8 bg-white rounded-xl p-6 border border-slate-100 shadow-sm relative overflow-hidden">
                     <div class="flex justify-between items-center mb-8">
-                        <h3 class="text-lg font-bold text-slate-800">Order Status</h3>
+                        <h3 class="text-xl font-bold text-slate-800">Order Status</h3>
                         <div class="flex items-center gap-10">
-                            <div class="flex items-center gap-3">
-                                <div class="w-3 h-3 rounded-full bg-red-500 shadow-sm shadow-red-500/20"></div>
-                                <span class="text-xs font-bold text-slate-400">Order</span>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3.5 h-3.5 rounded-full bg-red-500 shadow-sm shadow-red-500/20"></div>
+                                <span class="text-sm font-bold text-slate-400">Order</span>
                             </div>
-                            <div class="flex items-center gap-3">
-                                <div class="w-3 h-3 rounded-full bg-blue-500 shadow-sm shadow-blue-500/20"></div>
-                                <span class="text-xs font-bold text-slate-400">Store</span>
+                            <div class="flex items-center gap-4">
+                                <div class="w-3.5 h-3.5 rounded-full bg-blue-500 shadow-sm shadow-blue-500/20"></div>
+                                <span class="text-sm font-bold text-slate-400">Store</span>
                             </div>
                             <div class="flex gap-8 ml-6">
-                                <button class="text-xs font-bold text-blue-600">Daily</button>
-                                <button class="text-xs font-bold text-slate-300">Weekly</button>
+                                <button class="text-sm font-bold text-blue-600">Daily</button>
+                                <button class="text-sm font-bold text-slate-300">Weekly</button>
                             </div>
                         </div>
                     </div>
@@ -326,20 +331,20 @@
                     <!-- MOCK CHART -->
                     <div class="h-48 relative">
                         <div class="absolute inset-0 flex flex-col justify-between">
-                            <div class="w-full border-t border-slate-50 flex items-center gap-3">
-                                <span class="text-[9px] font-bold text-slate-300 w-6">1000</span>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[11px] font-bold text-slate-300 w-8">1000</span>
                                 <div class="flex-1 border-t border-slate-50"></div>
                             </div>
-                            <div class="w-full border-t border-slate-50 flex items-center gap-3">
-                                <span class="text-[9px] font-bold text-slate-300 w-6">600</span>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[11px] font-bold text-slate-300 w-8">600</span>
                                 <div class="flex-1 border-t border-slate-50"></div>
                             </div>
-                            <div class="w-full border-t border-slate-50 flex items-center gap-3">
-                                <span class="text-[9px] font-bold text-slate-300 w-6">300</span>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[11px] font-bold text-slate-300 w-8">300</span>
                                 <div class="flex-1 border-t border-slate-50"></div>
                             </div>
-                            <div class="w-full border-t border-slate-50 flex items-center gap-3">
-                                <span class="text-[9px] font-bold text-slate-300 w-6">100</span>
+                            <div class="w-full border-t border-slate-50 flex items-center gap-4">
+                                <span class="text-[11px] font-bold text-slate-300 w-8">100</span>
                                 <div class="flex-1 border-t border-slate-50"></div>
                             </div>
                         </div>
@@ -361,7 +366,7 @@
                         </svg>
                     </div>
                     <div
-                        class="flex justify-between px-12 mt-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest">
+                        class="flex justify-between px-12 mt-5 text-[12px] font-bold text-slate-400 uppercase tracking-widest">
                         <span>Nov 01</span>
                         <span>Nov 02</span>
                         <span>Nov 03</span>
@@ -396,8 +401,8 @@
 
                     <div class="space-y-8">
                         <div>
-                            <div class="flex justify-between items-center mb-2.5">
-                                <span class="text-xs font-bold text-slate-700">Rubavu</span>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm font-bold text-slate-700">Rubavu</span>
                             </div>
                             <div class="w-full h-2 bg-blue-50 rounded-full overflow-hidden">
                                 <div class="h-full bg-blue-600 rounded-full shadow-[0_0_10px_rgba(37,99,235,0.2)]"
@@ -405,8 +410,8 @@
                             </div>
                         </div>
                         <div>
-                            <div class="flex justify-between items-center mb-2.5">
-                                <span class="text-xs font-bold text-slate-700">Gatsata</span>
+                            <div class="flex justify-between items-center mb-3">
+                                <span class="text-sm font-bold text-slate-700">Gatsata</span>
                             </div>
                             <div class="w-full h-2 bg-pink-50 rounded-full overflow-hidden">
                                 <div class="h-full bg-pink-500 rounded-full relative" style="width: 45%;">
@@ -431,68 +436,68 @@
                         <thead>
                             <tr class="bg-slate-50/30">
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Id</th>
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Company name</th>
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Product</th>
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Category</th>
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Amount</th>
                                 <th
-                                    class="py-2 px-4 text-[9px] font-bold text-slate-400 uppercase tracking-widest leading-none">
+                                    class="py-3 px-4 text-[11px] font-bold text-slate-400 uppercase tracking-widest leading-none">
                                     Status</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-50">
-                            <tr class="hover:bg-slate-50/50 transition-colors">
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">A0B1C017</td>
-                                <td class="py-1.5 px-4 text-[9px] font-bold text-slate-700">Rwanda Coding Academy</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">Powder</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-600">30000 rwf</td>
-                                <td class="py-1.5 px-4 text-right">
+                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
+                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C017</td>
+                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Rwanda Coding Academy</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-400">Powder</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-600">30000 rwf</td>
+                                <td class="py-3 px-4 text-right">
                                     <span
-                                        class="px-2 py-0.5 bg-green-100 text-green-600 text-[8px] font-bold rounded-full">Complete</span>
+                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
+                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C061</td>
+                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Muhabura TSS</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-400">CO₂</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-600">50000 rwf</td>
+                                <td class="py-3 px-4 text-right">
+                                    <span
+                                        class="px-3 py-1 bg-red-100 text-red-600 text-[10px] font-bold rounded-full">Cancelled</span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
+                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C049</td>
+                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Kanombe Airport</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-400">Water</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-600">50000 rwf</td>
+                                <td class="py-3 px-4 text-right">
+                                    <span
+                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
                                 </td>
                             </tr>
                             <tr class="hover:bg-slate-50/50 transition-colors">
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">A0B1C061</td>
-                                <td class="py-1.5 px-4 text-[9px] font-bold text-slate-700">Muhabura TSS</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">CO₂</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-600">50000 rwf</td>
-                                <td class="py-1.5 px-4 text-right">
+                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C029</td>
+                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">GS Nyabihu</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-400">Sand</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-600">1000000 rwf</td>
+                                <td class="py-3 px-4 text-right">
                                     <span
-                                        class="px-2 py-0.5 bg-red-100 text-red-600 text-[8px] font-bold rounded-full">Cancelled</span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50/50 transition-colors">
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">A0B1C049</td>
-                                <td class="py-1.5 px-4 text-[9px] font-bold text-slate-700">Kanombe Airport</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">Water</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-600">50000 rwf</td>
-                                <td class="py-1.5 px-4 text-right">
-                                    <span
-                                        class="px-2 py-0.5 bg-green-100 text-green-600 text-[8px] font-bold rounded-full">Complete</span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50/50 transition-colors">
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">A0B1C029</td>
-                                <td class="py-1.5 px-4 text-[9px] font-bold text-slate-700">GS Nyabihu</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-400">Sand</td>
-                                <td class="py-1.5 px-4 text-[9px] text-slate-600">1000000 rwf</td>
-                                <td class="py-1.5 px-4 text-right">
-                                    <span
-                                        class="px-2 py-0.5 bg-green-100 text-green-600 text-[8px] font-bold rounded-full">Complete</span>
+                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -500,32 +505,32 @@
                 </div>
 
                 <!-- PAGINATION -->
-                <div class="px-4 py-2 flex items-center justify-between border-t border-slate-50 bg-white">
-                    <div class="flex items-center gap-2">
-                        <span class="text-[10px] font-bold text-slate-400">Showing</span>
+                <div class="px-5 py-3 flex items-center justify-between border-t border-slate-50 bg-white">
+                    <div class="flex items-center gap-3">
+                        <span class="text-[11px] font-bold text-slate-400">Showing</span>
                         <div class="relative">
                             <select
-                                class="appearance-none px-2.5 py-0.5 bg-slate-50 border border-slate-100 rounded text-[10px] font-black text-[#0B1437] pr-6 focus:outline-none">
+                                class="appearance-none px-3 py-1 bg-slate-50 border border-slate-100 rounded text-[11px] font-black text-[#0B1437] pr-8 focus:outline-none">
                                 <option>10</option>
                             </select>
                             <i data-lucide="chevron-down"
-                                class="w-2.5 h-2.5 absolute right-1.5 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
+                                class="w-3 h-3 absolute right-2 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"></i>
                         </div>
-                        <span class="text-[10px] font-bold text-slate-400">of 50</span>
+                        <span class="text-[11px] font-bold text-slate-400">of 50</span>
                     </div>
 
-                    <div class="flex items-center gap-1">
+                    <div class="flex items-center gap-1.5">
                         <button
-                            class="w-5 h-5 flex items-center justify-center rounded border border-slate-50 text-slate-400 hover:bg-slate-50 transition-colors">
-                            <i data-lucide="chevron-left" class="w-2.5 h-2.5"></i>
+                            class="w-6 h-6 flex items-center justify-center rounded border border-slate-50 text-slate-400 hover:bg-slate-50 transition-colors">
+                            <i data-lucide="chevron-left" class="w-3 h-3"></i>
                         </button>
                         <button
-                            class="w-5 h-5 flex items-center justify-center rounded bg-[#0B1437] text-white text-[9px] font-black shadow-sm">1</button>
+                            class="w-6 h-6 flex items-center justify-center rounded bg-[#0B1437] text-white text-[10px] font-black shadow-sm">1</button>
                         <button
-                            class="w-5 h-5 flex items-center justify-center rounded border border-slate-50 text-slate-600 text-[9px] font-bold hover:bg-slate-50 transition-colors">2</button>
+                            class="w-6 h-6 flex items-center justify-center rounded border border-slate-50 text-slate-600 text-[10px] font-bold hover:bg-slate-50 transition-colors">2</button>
                         <button
-                            class="w-5 h-5 flex items-center justify-center rounded border border-slate-50 text-slate-400 hover:bg-slate-50 transition-colors">
-                            <i data-lucide="chevron-right" class="w-2.5 h-2.5"></i>
+                            class="w-6 h-6 flex items-center justify-center rounded border border-slate-50 text-slate-400 hover:bg-slate-50 transition-colors">
+                            <i data-lucide="chevron-right" class="w-3 h-3"></i>
                         </button>
                     </div>
                 </div>

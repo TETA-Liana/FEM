@@ -38,6 +38,7 @@ import { SuperAdminClientDetails } from './pages/super-admin-client-details/supe
 import { SuperAdminClients } from './pages/super-admin-clients/super-admin-clients';
 import { SuperAdminReports } from './pages/super-admin-reports/super-admin-reports';
 import { SuperAdminLogs } from './pages/super-admin-logs/super-admin-logs';
+import { ClientClientsComponent } from './pages/client-clients/client-clients';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -60,6 +61,7 @@ export const routes: Routes = [
   { path: 'admin-refills', component: AdminRefills },
   { path: 'admin-settings', component: AdminSettings },
   { path: 'clients', component: ClientsDashboard },
+  { path: 'client-clients', component: ClientClientsComponent },
   { path: 'admin-locations', component: AdminLocationsDashboard },
   { path: 'admin-location-details', component: AdminLocationDetails },
   { path: 'admin-view-extinguisher/:id', component: AdminViewExtinguisherComponent },
