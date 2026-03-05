@@ -37,6 +37,7 @@ import { SuperAdminAdminDetails } from './pages/super-admin-admin-details/super-
 import { SuperAdminClientDetails } from './pages/super-admin-client-details/super-admin-client-details';
 import { SuperAdminClients } from './pages/super-admin-clients/super-admin-clients';
 import { SuperAdminReports } from './pages/super-admin-reports/super-admin-reports';
+import { SuperAdminLogs } from './pages/super-admin-logs/super-admin-logs';
 
 export const routes: Routes = [
   { path: '', component: SignupComponent },
@@ -49,6 +50,7 @@ export const routes: Routes = [
   { path: 'super-admin-clients', component: SuperAdminClients },
   { path: 'super-admin-client-details', component: SuperAdminClientDetails },
   { path: 'super-admin-reports', component: SuperAdminReports },
+  { path: 'super-admin-logs', component: SuperAdminLogs },
 
   { path: 'super-admin-admin-details/:id', component: SuperAdminAdminDetails },
   { path: 'admin-assigned-inspections', component: AdminAssignedInspections },
