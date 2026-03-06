@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface ClientSummary {
   initials: string;
@@ -15,7 +16,7 @@ interface ClientSummary {
 @Component({
   selector: 'app-client-clients',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './client-clients.html',
   styleUrl: './client-clients.css',
 })
@@ -76,6 +77,14 @@ export class ClientClientsComponent {
         c.phone.toLowerCase().includes(term)
       );
     });
+  }
+
+  get activeClientsCount(): number {
+    return this.clients.filter((c) => c.status === 'Active').length;
+  }
+
+  get inactiveClientsCount(): number {
+    return this.clients.filter((c) => c.status === 'Inactive').length;
   }
 }
 
