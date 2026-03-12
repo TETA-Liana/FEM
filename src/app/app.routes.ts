@@ -6,7 +6,6 @@ import { ExtinguishersComponent } from './pages/extinguishers/extinguishers.comp
 import { ServiceRequestsComponent } from './pages/service-requests/service-requests.component';
 import { InspectorsOverviewComponent } from './pages/inspectors-overview/inspectors-overview.component';
 import { LocationsDashboardComponent } from './pages/locations-dashboard/locations-dashboard.component';
-import { AddExtinguisher } from './pages/add-extinguisher/add-extinguisher';
 import { Reports } from './pages/reports/reports';
 import { Shop } from './pages/shop/shop';
 import { Cart } from './pages/cart/cart';
@@ -71,7 +70,6 @@ export const routes: Routes = [
   { path: 'service-requests', component: ServiceRequestsComponent },
   { path: 'inspectors', component: InspectorsOverviewComponent },
   { path: 'locations', component: LocationsDashboardComponent },
-  { path: 'add-extinguisher', component: AddExtinguisher },
   { path: 'view-extinguisher/:id', component: ViewExtinguisherComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'notifications', component: NotificationsComponent },
