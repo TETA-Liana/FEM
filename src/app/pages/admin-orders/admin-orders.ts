@@ -20,6 +20,21 @@ export class AdminOrders implements AfterViewInit, OnInit {
 
   orders: Order[] = [];
 
+  // Denial modal state
+  showDenialModal = false;
+  orderToDeny: Order | null = null;
+  selectedReason = '';
+  customReason = '';
+
+  denialReasons = [
+    { value: 'out_of_stock', label: 'Out of Stock', icon: 'package-x' },
+    { value: 'payment_issue', label: 'Payment Issue', icon: 'credit-card' },
+    { value: 'invalid_order', label: 'Invalid Order Details', icon: 'file-x' },
+    { value: 'product_discontinued', label: 'Product Discontinued', icon: 'ban' },
+    { value: 'delivery_unavailable', label: 'Delivery Unavailable in Area', icon: 'map-pin-off' },
+    { value: 'other', label: 'Other (specify below)', icon: 'message-circle' },
+  ];
+
   constructor(private orderService: OrderService) {}
 
   ngOnInit() {
@@ -62,9 +77,35 @@ export class AdminOrders implements AfterViewInit, OnInit {
     this.initIcons();
   }
 
-  cancelOrder(id: string) {
-    this.orderService.cancelOrder(id);
+  openDenyModal(order: Order) {
+    this.orderToDeny = order;
+    this.selectedReason = '';
+    this.customReason = '';
+    this.showDenialModal = true;
+    setTimeout(() => this.initIcons(), 100);
+  }
+
+  closeDenyModal() {
+    this.showDenialModal = false;
+    this.orderToDeny = null;
+    this.selectedReason = '';
+    this.customReason = '';
+  }
+
+  confirmDeny() {
+    if (!this.orderToDeny) return;
+    const reasonLabel = this.selectedReason === 'other'
+      ? (this.customReason.trim() || 'Other reason')
+      : (this.denialReasons.find(r => r.value === this.selectedReason)?.label || 'No reason provided');
+    this.orderService.cancelOrder(this.orderToDeny.id, reasonLabel);
+    this.closeDenyModal();
     this.initIcons();
+  }
+
+  get canConfirmDeny(): boolean {
+    if (!this.selectedReason) return false;
+    if (this.selectedReason === 'other' && !this.customReason.trim()) return false;
+    return true;
   }
 
   ngAfterViewInit() {
