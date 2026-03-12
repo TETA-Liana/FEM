@@ -1,7 +1,8 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterModule, RouterLink, RouterLinkActive, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { ProductService } from '../../services/product.service';
 
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
 
@@ -14,6 +15,8 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
 })
 export class AdminAddExtinguisher implements AfterViewInit {
   inspectionsOpen = true;
+
+  constructor(private productService: ProductService, private router: Router) {}
 
   toggleInspections() {
     this.inspectionsOpen = !this.inspectionsOpen;
@@ -49,5 +52,18 @@ export class AdminAddExtinguisher implements AfterViewInit {
 
   setPurchaseType(type: string) {
     this.purchaseType = type;
+  }
+
+  saveUnit() {
+    this.productService.addProduct({
+      name: this.formData.title,
+      price: parseFloat(this.formData.price),
+      capacity: this.formData.capacity,
+      badge: this.formData.category.toUpperCase(),
+      supplier: 'Admin Upload',
+      model: 'ADM-' + Math.floor(Math.random() * 10000)
+    });
+    alert('Extinguisher added successfully!');
+    this.router.navigate(['/shop']);
   }
 }
