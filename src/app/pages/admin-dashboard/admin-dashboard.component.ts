@@ -1,6 +1,7 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, RouterLink, RouterLinkActive } from '@angular/router';
+import { OrderService, Order } from '../../services/order.service';
 
 declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | undefined;
 
@@ -11,8 +12,29 @@ declare const lucide: { createIcons: (opts?: { nameAttr?: string }) => void } | 
     templateUrl: './admin-dashboard.component.html',
     styleUrl: './admin-dashboard.component.css'
 })
-export class AdminDashboardComponent implements AfterViewInit {
+export class AdminDashboardComponent implements AfterViewInit, OnInit {
     inspectionsOpen = true;
+    orders: Order[] = [];
+
+    constructor(private orderService: OrderService) {}
+
+    ngOnInit() {
+        this.orderService.orders$.subscribe(orders => {
+            this.orders = orders;
+        });
+    }
+
+    approveOrder(id: string) {
+        this.orderService.approveOrder(id);
+    }
+
+    cancelOrder(id: string) {
+        this.orderService.cancelOrder(id);
+    }
+
+    get pendingCount() {
+        return this.orders.filter(o => o.status === 'Pending Approval').length;
+    }
 
     toggleInspections() {
         this.inspectionsOpen = !this.inspectionsOpen;

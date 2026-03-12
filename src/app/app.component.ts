@@ -24,7 +24,7 @@ export class AppComponent {
     const path = this.router.url.split('?')[0];
     // Never show the client layout for Admin/Super Admin areas (covers trailing slashes, nested segments, etc.).
     if (path.startsWith('/admin-') || path.startsWith('/super-admin-') || path === '/clients') return false;
-    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/super-admin-dashboard', '/super-admin-clients', '/super-admin-client-details', '/super-admin-add-admin', '/super-admin-admins', '/super-admin-admin-details', '/super-admin-reports', '/super-admin-logs', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label', '/admin-assigned-inspections', '/admin-inventory', '/admin-inspectors', '/admin-compliance', '/admin-refills', '/admin-settings'];
+    const excludedRoutes = ['/', '/signin', '/signup', '/admin-dashboard', '/super-admin-dashboard', '/super-admin-clients', '/super-admin-client-details', '/super-admin-add-admin', '/super-admin-admins', '/super-admin-admin-details', '/super-admin-reports', '/super-admin-logs', '/clients', '/admin-locations', '/admin-location-details', '/admin-view-extinguisher', '/admin-add-extinguisher', '/admin-inspection-label', '/admin-assigned-inspections', '/admin-inventory', '/admin-inspectors', '/admin-compliance', '/admin-refills', '/admin-settings', '/admin-orders'];
 
     // Check for exact matches or paths starting with certain prefixes
     if (excludedRoutes.includes(path)) return false;

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { OrderService } from '../../services/order.service';
 
 @Component({
   selector: 'app-checkout',
@@ -37,10 +38,17 @@ export class Checkout {
   deliveryFee = 15.00;
   grandTotal = 240.50;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private orderService: OrderService) { }
 
   placeOrder() {
-    alert('Order placed successfully!');
+    this.orderService.placeOrder({
+      companyName: 'TechSafe Industries Ltd.',
+      productNames: this.orderItems.map(i => i.name).join(', '),
+      category: 'Fire Safety',
+      amount: this.grandTotal,
+      status: 'Pending Approval'
+    });
+    alert('Order placed successfully! Waiting for admin approval.');
     this.router.navigate(['/dashboard']);
   }
 

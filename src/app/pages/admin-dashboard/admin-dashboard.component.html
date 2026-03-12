@@ -78,6 +78,17 @@
                 <p class="text-[9px] font-black text-slate-100 uppercase tracking-[0.15em] px-3 mb-4">
                     Management</p>
                 <div class="space-y-1">
+                    <a routerLink="/admin-orders" routerLinkActive="bg-white/10 text-white"
+                        class="flex items-center justify-between px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white group cursor-pointer">
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="shopping-bag" class="w-3 h-3 opacity-90 group-hover:opacity-100 shrink-0"></i>
+                            <span class="text-[12px] tracking-wide font-semibold">Orders</span>
+                        </div>
+                        <span *ngIf="pendingCount > 0"
+                            class="w-5 h-5 bg-orange-500 text-white rounded-full text-[10px] flex items-center justify-center font-black">
+                            {{ pendingCount }}
+                        </span>
+                    </a>
                     <a routerLink="/admin-compliance"
                         class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-50 hover:bg-white/10 transition-all hover:text-white justify-between group cursor-pointer">
                         <div class="flex items-center gap-3">
@@ -456,48 +467,19 @@
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-slate-50">
-                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
-                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C017</td>
-                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Rwanda Coding Academy</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-400">Powder</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-600">30000 rwf</td>
-                                <td class="py-3 px-4 text-right">
-                                    <span
-                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
-                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C061</td>
-                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Muhabura TSS</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-400">CO₂</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-600">50000 rwf</td>
-                                <td class="py-3 px-4 text-right">
-                                    <span
-                                        class="px-3 py-1 bg-red-100 text-red-600 text-[10px] font-bold rounded-full">Cancelled</span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
-                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C049</td>
-                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">Kanombe Airport</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-400">Water</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-600">50000 rwf</td>
-                                <td class="py-3 px-4 text-right">
-                                    <span
-                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
-                                </td>
-                            </tr>
-                            <tr class="hover:bg-slate-50/50 transition-colors">
-                                <td class="py-3 px-4 text-[11px] text-slate-400">A0B1C029</td>
-                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">GS Nyabihu</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-500">Clp-Product 1203-62</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-400">Sand</td>
-                                <td class="py-3 px-4 text-[11px] text-slate-600">1000000 rwf</td>
-                                <td class="py-3 px-4 text-right">
-                                    <span
-                                        class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
+                            <tr *ngFor="let order of orders" class="hover:bg-slate-50/50 transition-colors border-b border-slate-50">
+                                <td class="py-3 px-4 text-[11px] text-slate-400">{{ order.id }}</td>
+                                <td class="py-3 px-4 text-[12px] font-bold text-slate-700">{{ order.companyName }}</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-500">{{ order.productNames }}</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-400">{{ order.category }}</td>
+                                <td class="py-3 px-4 text-[11px] text-slate-600">{{ order.amount }} rwf</td>
+                                <td class="py-3 px-4 text-right flex items-center justify-end gap-2">
+                                    <span *ngIf="order.status === 'Complete'" class="px-3 py-1 bg-green-100 text-green-600 text-[10px] font-bold rounded-full">Complete</span>
+                                    <span *ngIf="order.status === 'Cancelled'" class="px-3 py-1 bg-red-100 text-red-600 text-[10px] font-bold rounded-full">Cancelled</span>
+                                    <span *ngIf="order.status === 'Pending Approval'" class="px-3 py-1 bg-orange-100 text-orange-600 text-[10px] font-bold rounded-full">Pending</span>
+                                    
+                                    <button *ngIf="order.status === 'Pending Approval'" (click)="approveOrder(order.id)" class="ml-2 px-2 py-1 bg-green-600 text-white text-[10px] font-bold rounded hover:bg-green-700 transition">Approve</button>
+                                    <button *ngIf="order.status === 'Pending Approval'" (click)="cancelOrder(order.id)" class="ml-2 px-2 py-1 bg-red-600 text-white text-[10px] font-bold rounded hover:bg-red-700 transition">Deny</button>
                                 </td>
                             </tr>
                         </tbody>

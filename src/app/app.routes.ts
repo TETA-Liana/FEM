@@ -29,6 +29,7 @@ import { AdminCompliance } from './pages/admin-compliance/admin-compliance';
 
 import { AdminRefills } from './pages/admin-refills/admin-refills';
 import { AdminSettings } from './pages/admin-settings/admin-settings';
+import { AdminOrders } from './pages/admin-orders/admin-orders';
 import { SuperAdminDashboard } from './pages/super-admin-dashboard/super-admin-dashboard';
 import { SuperAdminAddAdmin } from './pages/super-admin-add-admin/super-admin-add-admin';
 import { SuperAdminAdmins } from './pages/super-admin-admins/super-admin-admins';
@@ -59,6 +60,7 @@ export const routes: Routes = [
   { path: 'admin-compliance', component: AdminCompliance },
   { path: 'admin-refills', component: AdminRefills },
   { path: 'admin-settings', component: AdminSettings },
+  { path: 'admin-orders', component: AdminOrders },
   { path: 'clients', component: ClientsDashboard },
   { path: 'client-clients', component: ClientClientsComponent },
   { path: 'admin-locations', component: AdminLocationsDashboard },
