@@ -1,12 +1,12 @@
 ﻿[33mΓ¥»[39m Building...
 [32mΓ£ö[39m Building...
 [1mInitial chunk files[22m[2m | [22m[1mNames[22m        [2m | [22m [1mRaw size[22m[2m | [22m[1mEstimated transfer size[22m
-[32mmain-45Q75VPK.js[39m   [2m | [22m[2mmain[22m         [2m | [22m[36m991.67 kB[39m[2m | [22m              [36m162.21 kB[39m
-[32mstyles-DJUADV5W.css[39m[2m | [22m[2mstyles[22m       [2m | [22m[36m120.76 kB[39m[2m | [22m               [36m13.66 kB[39m
+[32mmain-VJB3WWIT.js[39m   [2m | [22m[2mmain[22m         [2m | [22m[36m990.64 kB[39m[2m | [22m              [36m162.09 kB[39m
+[32mstyles-TNEDAHVY.css[39m[2m | [22m[2mstyles[22m       [2m | [22m[36m120.19 kB[39m[2m | [22m               [36m13.60 kB[39m
 
-[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m  [1m1.11 MB[22m[2m | [22m              [1m175.87 kB[22m
+[1m [22m                  [2m | [22m[1mInitial total[22m[2m | [22m  [1m1.11 MB[22m[2m | [22m              [1m175.68 kB[22m
 
-Application bundle generation complete. [10.794 seconds] - 2026-03-12T18:06:10.167Z
+Application bundle generation complete. [9.879 seconds] - 2026-03-12T18:11:44.457Z
 
 Output location: C:\Users\pc\Desktop\Projects\FEM\dist\FEM
 

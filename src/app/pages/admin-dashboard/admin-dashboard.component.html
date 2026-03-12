@@ -1,4 +1,4 @@
-﻿<div class="flex h-screen bg-[#F8FAFC] font-['Poppins'] overflow-hidden">
+<div class="flex h-screen bg-[#F8FAFC] font-['Poppins'] overflow-hidden">
     <!-- SIDEBAR: Specific for Admin Dashboard -->
     <aside class="w-48 bg-[#0B1437] shrink-0 flex flex-col h-screen sticky top-0">
         <!-- LOGO -->
@@ -439,7 +439,7 @@
             <!-- RECENT ORDERS TABLE -->
             <div class="bg-white rounded-xl border border-slate-100 shadow-sm overflow-hidden mb-6">
                 <div class="p-8">
-                    <h3 class="text-xs font-bold text-slate-800">Recent Order</h3>
+                    <h3 class="text-xs font-bold text-slate-800">Recent Orders</h3>
                 </div>
 
                 <div class="overflow-x-auto">
@@ -473,13 +473,10 @@
                                 <td class="py-3 px-4 text-[14px] text-slate-500">{{ order.productNames }}</td>
                                 <td class="py-3 px-4 text-[14px] text-slate-400">{{ order.category }}</td>
                                 <td class="py-3 px-4 text-[14px] text-slate-600">{{ order.amount }} rwf</td>
-                                <td class="py-3 px-4 text-right flex items-center justify-end gap-5">
+                                <td class="py-3 px-4">
                                     <span *ngIf="order.status === 'Complete'" class="px-3 py-1 bg-green-100 text-green-600 text-[13px] font-bold rounded-full">Complete</span>
                                     <span *ngIf="order.status === 'Cancelled'" class="px-3 py-1 bg-red-100 text-red-600 text-[13px] font-bold rounded-full">Cancelled</span>
                                     <span *ngIf="order.status === 'Pending Approval'" class="px-3 py-1 bg-orange-100 text-orange-600 text-[13px] font-bold rounded-full">Pending</span>
-                                    
-                                    <button *ngIf="order.status === 'Pending Approval'" (click)="approveOrder(order.id)" class="ml-2 px-3 py-1.5 bg-green-600 text-white text-[13px] font-bold rounded hover:bg-green-700 transition">Approve</button>
-                                    <button *ngIf="order.status === 'Pending Approval'" (click)="cancelOrder(order.id)" class="ml-2 px-3 py-1.5 bg-red-600 text-white text-[13px] font-bold rounded hover:bg-red-700 transition">Deny</button>
                                 </td>
                             </tr>
                         </tbody>
